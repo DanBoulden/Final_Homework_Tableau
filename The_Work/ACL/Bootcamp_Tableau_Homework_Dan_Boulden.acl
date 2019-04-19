@@ -1,0 +1,738 @@
+@ACL1400
+^LAYOUT   T20                                                                 86 D.T,
+Start_Station_Id ASCII       1   4    
+COUNT          ACL         5  12 0 WIDTH 8  
+Start_Station_Latitude ASCII      17  12    
+Start_Station_Longitude ASCII      29  13    
+Start_Station_Name ASCII      42  45    
+^LAYOUT   TEST                                                                272 D.T,
+Distance       ASCII       1   1    
+Station_Latitude ASCII       2  12    
+Station_Longitude ASCII      14  13    
+LAT_TEST       ASCII      27  12    
+Geometry       ASCII      39   1    
+Name           ASCII      40   1    
+Number_of_Records PRINT      41   1 0  
+Start_Station_Id__bin_ ASCII      42   4    
+Bikeid         PRINT      46   5 0  
+Birth_Year     PRINT      51   4 0  
+Circular       ASCII      55   1    
+End_Station_Id PRINT      56   4 0  
+End_Station_Latitude ASCII      60  12    
+End_Station_Longitude ASCII      72  13    
+End_Station_Name ASCII      85  45    
+Gender         PRINT     130   1 0  
+Large          ASCII     131   1    
+Mini_Hoop      ASCII     132   1    
+Small          ASCII     133   1    
+Start_Station_Id PRINT     134   4 0  
+Start_Station_Latitude ASCII     138  12    
+Start_Station_Longitude ASCII     150  13    
+Start_Station_Name ASCII     163  45    
+Starttime      DATETIME  208  22   PICTURE "MM/DD/YYYY hh:mm:ss" WIDTH 27  
+Stoptime       DATETIME  230  22   PICTURE "MM/DD/YYYY hh:mm:ss" WIDTH 27  
+Total_Rack     ASCII     252   1    
+Tripduration   PRINT     253   8 0  
+Usertype       ASCII     261  10    
+^LAYOUT   CitiBike_Distance_Version_SORT                                      298 D.T,
+Bikeid         ASCII       1   5    
+Birth_Year     ASCII       6   4    
+END_STATION_TOTAL ASCII      10  12    
+Distance_S_to_E PRINT      22  15 9  
+Circular       ASCII      37   1    
+End_Station_Id ASCII      38   4    
+End_Station_Latitude ASCII      42  12    
+End_Station_Longitude ASCII      54  13    
+End_Station_Name ASCII      67  45    
+Gender         ASCII     112   1    
+Geometry       ASCII     113   1    
+Lat_Test       ASCII     114  12    
+Large          ASCII     126   1    
+Mini_Hoop      ASCII     127   1    
+Name           ASCII     128   1    
+Number_of_Records ASCII     129   1    
+Small          ASCII     130   1    
+Start_Station_Id__bin_ ASCII     131   4    
+Start_Station_Id ASCII     135   4    
+Start_Station_Latitude ASCII     139  12    
+Start_Station_Longitude ASCII     151  13    
+Start_Station_Name ASCII     164  45    
+Starttime      DATETIME  209  22   PICTURE "MM/DD/YYYY hh:mm:ss AM" WIDTH 27  
+Station_Latitude ASCII     231  12    
+Station_Longitude ASCII     243  13    
+Stoptime       DATETIME  256  22   PICTURE "MM/DD/YYYY hh:mm:ss AM" WIDTH 27  
+Total_Rack     ASCII     278   1    
+Tripduration   NUMERIC   279   8 0 WIDTH 8  
+Usertype       ASCII     287  10    
+^LAYOUT   NUM_Of_START_STATION_USE                                            86 D.T,
+Start_Station_Id ASCII       1   4    
+COUNT          ACL         5  12 0 WIDTH 8  
+Start_Station_Latitude ASCII      17  12    
+Start_Station_Longitude ASCII      29  13    
+Start_Station_Name ASCII      42  45    
+^LAYOUT   NUM_Of_START_STATION_USE_SORT                                       86 D.T,
+Start_Station_Id ASCII       1   4    
+COUNT          ACL         5  12 0 WIDTH 8  
+Start_Station_Latitude ASCII      17  12    
+Start_Station_Longitude ASCII      29  13    
+Start_Station_Name ASCII      42  45    
+^LAYOUT   NUM_Of_END_STATION_USE                                              86 D.T,
+End_Station_Id ASCII       1   4    
+COUNT          ACL         5  12 0 WIDTH 8  
+End_Station_Latitude ASCII      17  12    
+End_Station_Longitude ASCII      29  13    
+End_Station_Name ASCII      42  45    
+^LAYOUT   NUM_Of_END_STATION_USE_SORT                                         86 D.T,
+End_Station_Id ASCII       1   4    
+COUNT          ACL         5  12 0 WIDTH 8  
+End_Station_Latitude ASCII      17  12    
+End_Station_Longitude ASCII      29  13    
+End_Station_Name ASCII      42  45    
+^LAYOUT   CitiBike_Distance_Version                                           298 D.T,
+Bikeid         ASCII       1   5    
+Birth_Year     ASCII       6   4    
+END_STATION_TOTAL ASCII      10  12    
+Distance_S_to_E PRINT      22  15 9  
+Circular       ASCII      37   1    
+End_Station_Id ASCII      38   4    
+End_Station_Latitude ASCII      42  12    
+End_Station_Longitude ASCII      54  13    
+End_Station_Name ASCII      67  45    
+Gender         ASCII     112   1    
+Geometry       ASCII     113   1    
+Lat_Test       ASCII     114  12    
+Large          ASCII     126   1    
+Mini_Hoop      ASCII     127   1    
+Name           ASCII     128   1    
+Number_of_Records ASCII     129   1    
+Small          ASCII     130   1    
+Start_Station_Id__bin_ ASCII     131   4    
+Start_Station_Id ASCII     135   4    
+Start_Station_Latitude ASCII     139  12    
+Start_Station_Longitude ASCII     151  13    
+Start_Station_Name ASCII     164  45    
+Starttime      DATETIME  209  22   PICTURE "MM/DD/YYYY hh:mm:ss AM" WIDTH 27  
+Station_Latitude ASCII     231  12    
+Station_Longitude ASCII     243  13    
+Stoptime       DATETIME  256  22   PICTURE "MM/DD/YYYY hh:mm:ss AM" WIDTH 27  
+Total_Rack     ASCII     278   1    
+Tripduration   NUMERIC   279   8 0 WIDTH 8  
+Usertype       ASCII     287  10    
+^LAYOUT   Computed_Distance_to_station_and_total_trips                        44 D.T,
+Start_Station_Id ASCII       1   4    
+End_Station_Id ASCII       5   4    
+Distance_S_to_E ACL         9  12 9 WIDTH 19  
+TOTAL_Tripduration ACL        21  12 0  
+TRIP_COUNT     ACL        33  12 0 WIDTH 8  
+^LAYOUT   TEMP_J_1                                                            332 D.T,
+Bikeid         ASCII       1   5    
+Birth_Year     ASCII       6   4    
+END_STATION_TOTAL ASCII      10  12    
+Distance_S_to_E PRINT      22  15 9  
+Circular       ASCII      37   1    
+End_Station_Id ASCII      38   4    
+End_Station_Latitude ASCII      42  12    
+End_Station_Longitude ASCII      54  13    
+End_Station_Name ASCII      67  45    
+Gender         ASCII     112   1    
+Geometry       ASCII     113   1    
+Lat_Test       ASCII     114  12    
+Large          ASCII     126   1    
+Mini_Hoop      ASCII     127   1    
+Name           ASCII     128   1    
+Number_of_Records ASCII     129   1    
+Small          ASCII     130   1    
+Start_Station_Id__bin_ ASCII     131   4    
+Start_Station_Id ASCII     135   4    
+Start_Station_Latitude ASCII     139  12    
+Start_Station_Longitude ASCII     151  13    
+Start_Station_Name ASCII     164  45    
+Starttime      DATETIME  209  22   PICTURE "MM/DD/YYYY hh:mm:ss AM" WIDTH 27  
+Station_Latitude ASCII     231  12    
+Station_Longitude ASCII     243  13    
+Stoptime       DATETIME  256  22   PICTURE "MM/DD/YYYY hh:mm:ss AM" WIDTH 27  
+Total_Rack     ASCII     278   1    
+Tripduration   NUMERIC   279   8 0 WIDTH 8  
+Usertype       ASCII     287  10    
+Distance_S_to_E2 ACL       297  12 9 AS "Distance_S_to_E" WIDTH 19  
+TRIP_COUNT     ACL       309  12 0 WIDTH 8  
+TOTAL_Tripduration ACL       321  12 0  
+^LAYOUT   NUM_Of_START_STATION_USE_SORT_T20                                   86 D.T,
+Start_Station_Id ASCII       1   4    
+START_STATION_COUNT ACL         5  12 0 WIDTH 8  
+Start_Station_Latitude ASCII      17  12    
+Start_Station_Longitude ASCII      29  13    
+Start_Station_Name ASCII      42  45    
+^LAYOUT   TEMP_J_2                                                            344 D.T,
+Bikeid         ASCII       1   5    
+Birth_Year     ASCII       6   4    
+END_STATION_TOTAL ASCII      10  12    
+Distance_S_to_E PRINT      22  15 9  
+Circular       ASCII      37   1    
+End_Station_Id ASCII      38   4    
+End_Station_Latitude ASCII      42  12    
+End_Station_Longitude ASCII      54  13    
+End_Station_Name ASCII      67  45    
+Gender         ASCII     112   1    
+Geometry       ASCII     113   1    
+Lat_Test       ASCII     114  12    
+Large          ASCII     126   1    
+Mini_Hoop      ASCII     127   1    
+Name           ASCII     128   1    
+Number_of_Records ASCII     129   1    
+Small          ASCII     130   1    
+Start_Station_Id__bin_ ASCII     131   4    
+Start_Station_Id ASCII     135   4    
+Start_Station_Latitude ASCII     139  12    
+Start_Station_Longitude ASCII     151  13    
+Start_Station_Name ASCII     164  45    
+Starttime      DATETIME  209  22   PICTURE "MM/DD/YYYY hh:mm:ss AM" WIDTH 27  
+Station_Latitude ASCII     231  12    
+Station_Longitude ASCII     243  13    
+Stoptime       DATETIME  256  22   PICTURE "MM/DD/YYYY hh:mm:ss AM" WIDTH 27  
+Total_Rack     ASCII     278   1    
+Tripduration   NUMERIC   279   8 0 WIDTH 8  
+Usertype       ASCII     287  10    
+Distance_S_to_E2 ACL       297  12 9 AS "Distance_S_to_E" WIDTH 19  
+TRIP_COUNT     ACL       309  12 0 WIDTH 8  
+TOTAL_Tripduration ACL       321  12 0  
+START_STATION_COUNT ACL       333  12 0 WIDTH 8  
+^LAYOUT   NUM_Of_END_STATION_USE_SORT_T20                                     86 D.T,
+End_Station_Id ASCII       1   4    
+END_STATION_COUNT ACL         5  12 0 WIDTH 8  
+End_Station_Latitude ASCII      17  12    
+End_Station_Longitude ASCII      29  13    
+End_Station_Name ASCII      42  45    
+^LAYOUT   FINAL_CityBike_Distance_With_Extras                                 356 D.T,
+Bikeid         ASCII       1   5    
+Birth_Year     ASCII       6   4    
+END_STATION_TOTAL ASCII      10  12    
+Distance_S_to_E PRINT      22  15 9  
+Circular       ASCII      37   1    
+End_Station_Id ASCII      38   4    
+End_Station_Latitude ASCII      42  12    
+End_Station_Longitude ASCII      54  13    
+End_Station_Name ASCII      67  45    
+Gender         ASCII     112   1    
+Geometry       ASCII     113   1    
+Lat_Test       ASCII     114  12    
+Large          ASCII     126   1    
+Mini_Hoop      ASCII     127   1    
+Name           ASCII     128   1    
+Number_of_Records ASCII     129   1    
+Small          ASCII     130   1    
+Start_Station_Id__bin_ ASCII     131   4    
+Start_Station_Id ASCII     135   4    
+Start_Station_Latitude ASCII     139  12    
+Start_Station_Longitude ASCII     151  13    
+Start_Station_Name ASCII     164  45    
+Starttime      DATETIME  209  22   PICTURE "MM/DD/YYYY hh:mm:ss AM" WIDTH 27  
+Station_Latitude ASCII     231  12    
+Station_Longitude ASCII     243  13    
+Stoptime       DATETIME  256  22   PICTURE "MM/DD/YYYY hh:mm:ss AM" WIDTH 27  
+Total_Rack     ASCII     278   1    
+Tripduration   NUMERIC   279   8 0 WIDTH 8  
+Usertype       ASCII     287  10    
+Distance_S_to_E2 ACL       297  12 9 AS "Distance_S_to_E" WIDTH 19  
+TRIP_COUNT     ACL       309  12 0 WIDTH 8  
+TOTAL_Tripduration ACL       321  12 0  
+START_STATION_COUNT ACL       333  12 0 WIDTH 8  
+END_STATION_COUNT ACL       345  12 0 WIDTH 8  
+^LOGFILE  Bootcamp_Tableau_Homework_Dan_Boulden                                                                                                                                                                                                                                "" "Bootcamp_Tableau_Homework_Dan_Boulden.LOG"
+[PARENT_FOLDER_ID] 0
+^REPORT   Default_View                                                        TEST                                                              D.T,
+[SKIP] 0
+[TLINES] 1
+[RLINES] 1
+[LINE] 1
+Distance             WIDTH 9 PICTURE ""
+[LINE] 1
+Station_Latitude     WIDTH 14 PICTURE ""
+[LINE] 1
+Station_Longitude    WIDTH 16 PICTURE ""
+[LINE] 1
+LAT_TEST             WIDTH 11 PICTURE ""
+[LINE] 1
+Geometry             WIDTH 10 PICTURE ""
+[LINE] 1
+Name                 WIDTH 7 PICTURE ""
+[LINE] 1
+Number_of_Records    WIDTH 17 PICTURE ""
+[LINE] 1
+Start_Station_Id__bin_ WIDTH 18 PICTURE ""
+[LINE] 1
+Bikeid               PICTURE ""
+[LINE] 1
+Birth_Year           WIDTH 10 PICTURE ""
+[LINE] 1
+Circular             WIDTH 8 PICTURE ""
+[LINE] 1
+End_Station_Id       WIDTH 13 PICTURE ""
+[LINE] 1
+End_Station_Latitude WIDTH 17 PICTURE ""
+[LINE] 1
+End_Station_Longitude WIDTH 19 PICTURE ""
+[LINE] 1
+End_Station_Name     WIDTH 23 PICTURE ""
+[LINE] 1
+Gender               WIDTH 8 PICTURE ""
+[LINE] 1
+Large                WIDTH 7 PICTURE ""
+[LINE] 1
+Mini_Hoop            WIDTH 11 PICTURE ""
+[LINE] 1
+Small                WIDTH 7 PICTURE ""
+[LINE] 1
+Start_Station_Id     WIDTH 14 PICTURE ""
+[LINE] 1
+Start_Station_Latitude WIDTH 18 PICTURE ""
+[LINE] 1
+Start_Station_Longitude WIDTH 19 PICTURE ""
+[LINE] 1
+Start_Station_Name   WIDTH 19 PICTURE ""
+[LINE] 1
+Starttime            WIDTH 15 PICTURE ""
+[LINE] 1
+Stoptime             WIDTH 15 PICTURE ""
+[LINE] 1
+Total_Rack           WIDTH 10 PICTURE ""
+[LINE] 1
+Tripduration         WIDTH 12 PICTURE ""
+[LINE] 1
+Usertype             WIDTH 9 PICTURE ""
+^FOLDER   RAW                                                                  1555696672
+[PARENT_FOLDER_ID] 0
+^FOLDER   TEMP                                                                 1555696678
+[PARENT_FOLDER_ID] 0
+^FOLDER   WORKING                                                              1555696686
+[PARENT_FOLDER_ID] 0
+^FORMAT   TEST                                                                TEST                                                              "" "TEST.fil" 0 ASCII 
+[PARENT_FOLDER_ID] 1555696672
+[LASTVIEW] "Default_View"
+[RETRIEVE] 0
+[REFRESH] DELIMITED "TEST.fil" FROM "C:\DAN\Bootcamp\DAN BootCamp\TABLEAU\20-Tableau\Homework_Tableau\Instructions\DATA\From_Tableau\citibike_201801_TO_201902_tripdata_BIG_VERSION Extract.csv" 0 SEPARATOR "," QUALIFIER NONE CONSECUTIVE STARTLINE 1 KEEPTITLE FIELD "Distance" C AT 1 DEC 0 WID 1 PIC "" AS "" FIELD "Station_Latitude" C AT 2 DEC 9 WID 12 PIC "" AS "" FIELD "Station_Longitude" C AT 14 DEC 9 WID 13 PIC "" AS "" FIELD "LAT_TEST" C AT 27 DEC 9 WID 12 PIC "" AS "" FIELD "Geometry" C AT 39 DEC 0 WID 1 PIC "" AS "" FIELD "Name" C AT 40 DEC 0 WID 1 PIC "" AS "" FIELD "Number_of_Records" N AT 41 DEC 0 WID 1 PIC "" AS "" FIELD "Start_Station_Id__bin_" C AT 42 DEC 0 WID 4 PIC "" AS "" FIELD "Bikeid" N AT 46 DEC 0 WID 5 PIC "" AS "" FIELD "Birth_Year" N AT 51 DEC 0 WID 4 PIC "" AS "" FIELD "Circular" C AT 55 DEC 0 WID 1 PIC "" AS "" FIELD "End_Station_Id" N AT 56 DEC 0 WID 4 PIC "" AS "" FIELD "End_Station_Latitude" C AT 60 DEC 9 WID 12 PIC "" AS "" FIELD "End_Station_Longitude" C AT 72 DEC 9 WID 13 PIC "" AS "" FIELD "End_Station_Name" C AT 85 DEC 0 WID 45 PIC "" AS "" FIELD "Gender" N AT 130 DEC 0 WID 1 PIC "" AS "" FIELD "Large" C AT 131 DEC 0 WID 1 PIC "" AS "" FIELD "Mini_Hoop" C AT 132 DEC 0 WID 1 PIC "" AS "" FIELD "Small" C AT 133 DEC 0 WID 1 PIC "" AS "" FIELD "Start_Station_Id" N AT 134 DEC 0 WID 4 PIC "" AS "" FIELD "Start_Station_Latitude" C AT 138 DEC 9 WID 12 PIC "" AS "" FIELD "Start_Station_Longitude" C AT 150 DEC 9 WID 13 PIC "" AS "" FIELD "Start_Station_Name" C AT 163 DEC 0 WID 45 PIC "" AS "" FIELD "Starttime" D AT 208 DEC 0 WID 22 PIC "MM/DD/YYYY hh:mm:ss" AS "" FIELD "Stoptime" D AT 230 DEC 0 WID 22 PIC "MM/DD/YYYY hh:MM:ss" AS "" FIELD "Total_Rack" C AT 252 DEC 0 WID 1 PIC "" AS "" FIELD "Tripduration" N AT 253 DEC 0 WID 8 PIC "" AS "" FIELD "Usertype" C AT 261 DEC 0 WID 10 PIC "" AS "" 
+^REPORT   Default_View                                                        T20                                                               D.T,
+[SKIP] 0
+[TLINES] 0
+[RLINES] 1
+[LINE] 1
+Start_Station_Id     WIDTH 16 PICTURE ""
+[LINE] 1
+COUNT                PICTURE ""
+[LINE] 1
+Start_Station_Latitude WIDTH 22 PICTURE ""
+[LINE] 1
+Start_Station_Longitude WIDTH 23 PICTURE ""
+[LINE] 1
+Start_Station_Name   PICTURE ""
+^FORMAT   T20                                                                 T20                                                               "" "T20.FIL" 0 ASCII 
+[PARENT_FOLDER_ID] 1555696686
+~.04/19/2019   14:23:33 CitiBike_Distance_Version SUMMARIZE ON Start_Station_Id OTHER Start_Station_Id Start_Station_Latitude Start_Station_Longitude Start_Station_Name TO "NUM_Of_START_STATION_USE.FIL" PRESORT
+~Input : Records:19459370    Control Total:0                    
+~Output: Records:831         Control Total:0                    
+~.04/19/2019   14:27:30 NUM_Of_START_STATION_USE SORT ON COUNT D TO NUM_Of_START_STATION_USE_SORT
+~Input : Records:831         Control Total:0                    
+~Output: Records:831         Control Total:0                    
+~.04/19/2019   14:28:56 NUM_Of_START_STATION_USE_SORT EXTRACT RECORD IF RECNO( ) <= 20 TO "T20" OPEN
+~Input : Records:831         Control Total:0                    
+~Output: Records:20          Control Total:0                    
+[LASTVIEW] "Default_View"
+^FOLDER   FINAL                                                                1555702278
+[PARENT_FOLDER_ID] 0
+^FOLDER   SCRIPTS                                                              1555702296
+[PARENT_FOLDER_ID] 0
+^BATCH    S_SUM_TO_TRIPS                                                      
+[PARENT_FOLDER_ID] 1555702296
+COMMENT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Imports RAW data and creates outputs
+SCRIPT NAME: S_SUM_TO_TRIPS
+SCRIPT DISCRIPTION: This is the script template
+WRITTEN BY: Dan Boulden 04/2019
+VERSION: 1.0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+END
+
+SET SAFETY OFF
+SET FOLDER /RAW
+
+COMMENT ******** START SCRIPT HERE ********
+OPEN TEST
+IMPORT DELIMITED TO CitiBike_Distance_Version "CitiBike_Distance_Version.fil" FROM "K:\Dan_Boulden\Homework_Tableau\Instructions\DATA\From_Tableau\citibike_201801_TO_201902_tripdata_Distance_Version.csv" 0 SEPARATOR "," QUALIFIER NONE CONSECUTIVE STARTLINE 1 KEEPTITLE FIELD "Bikeid" C AT 1 DEC 0 WID 5 PIC "" AS "" FIELD "Birth_Year" C AT 6 DEC 0 WID 4 PIC "" AS "" FIELD "END_STATION_TOTAL" C AT 10 DEC 9 WID 12 PIC "" AS "" FIELD "Distance_S_to_E" N AT 22 DEC 9 WID 15 PIC "" AS "" FIELD "Circular" C AT 37 DEC 0 WID 1 PIC "" AS "" FIELD "End_Station_Id" C AT 38 DEC 0 WID 4 PIC "" AS "" FIELD "End_Station_Latitude" C AT 42 DEC 9 WID 12 PIC "" AS "" FIELD "End_Station_Longitude" C AT 54 DEC 9 WID 13 PIC "" AS "" FIELD "End_Station_Name" C AT 67 DEC 0 WID 45 PIC "" AS "" FIELD "Gender" C AT 112 DEC 0 WID 1 PIC "" AS "" FIELD "Geometry" C AT 113 DEC 0 WID 1 PIC "" AS "" FIELD "Lat_Test" C AT 114 DEC 9 WID 12 PIC "" AS "" FIELD "Large" C AT 126 DEC 0 WID 1 PIC "" AS "" FIELD "Mini_Hoop" C AT 127 DEC 0 WID 1 PIC "" AS "" FIELD "Name" C AT 128 DEC 0 WID 1 PIC "" AS "" FIELD "Number_of_Records" C AT 129 DEC 0 WID 1 PIC "" AS "" FIELD "Small" C AT 130 DEC 0 WID 1 PIC "" AS "" FIELD "Start_Station_Id__bin_" C AT 131 DEC 0 WID 4 PIC "" AS "" FIELD "Start_Station_Id" C AT 135 DEC 0 WID 4 PIC "" AS "" FIELD "Start_Station_Latitude" C AT 139 DEC 9 WID 12 PIC "" AS "" FIELD "Start_Station_Longitude" C AT 151 DEC 9 WID 13 PIC "" AS "" FIELD "Start_Station_Name" C AT 164 DEC 0 WID 45 PIC "" AS "" FIELD "Starttime" D AT 209 DEC 0 WID 22 PIC "MM/DD/YYYY hh:mm:ss AM" AS "" FIELD "Station_Latitude" C AT 231 DEC 9 WID 12 PIC "" AS "" FIELD "Station_Longitude" C AT 243 DEC 9 WID 13 PIC "" AS "" FIELD "Stoptime" D AT 256 DEC 0 WID 22 PIC "MM/DD/YYYY hh:MM:ss AM" AS "" FIELD "Total_Rack" C AT 278 DEC 0 WID 1 PIC "" AS "" FIELD "Tripduration" C AT 279 DEC 0 WID 8 PIC "" AS "" FIELD "Usertype" C AT 287 DEC 0 WID 10 PIC "" AS "" 
+
+SET FOLDER /TEMP
+
+COMMENT Presorted to speed up the SUMMARIZE.
+OPEN CitiBike_Distance_Version
+SORT ON Start_Station_Id End_Station_Id TO CitiBike_Distance_Version_SORT
+
+
+SET FOLDER /WORKING
+OPEN CitiBike_Distance_Version_SORT
+SUMMARIZE ON Start_Station_Id End_Station_Id SUBTOTAL Distance_S_to_E TO "Computed_Distance_to_station_and_total_trips.FIL"
+
+OPEN Computed_Distance_to_station_and_total_trips
+DELETE FIELD COUNT OK 
+DEFINE FIELD TRIP_COUNT     ACL        21  12 0 WIDTH 8  
+
+CLOSE Computed_Distance_to_station_and_total_trips
+OPEN Computed_Distance_to_station_and_total_trips
+
+OPEN CitiBike_Distance_Version
+SUMMARIZE ON Start_Station_Id OTHER Start_Station_Id Start_Station_Latitude Start_Station_Longitude Start_Station_Name TO "NUM_Of_START_STATION_USE.FIL" PRESORT
+
+SUMMARIZE ON End_Station_Id OTHER End_Station_Id End_Station_Latitude End_Station_Longitude End_Station_Name TO "NUM_Of_END_STATION_USE.FIL" PRESORT
+
+OPEN NUM_Of_START_STATION_USE
+SORT ON COUNT D TO NUM_Of_START_STATION_USE_SORT
+OPEN NUM_Of_START_STATION_USE_SORT
+EXTRACT RECORD IF RECNO( ) <= 20 TO "NUM_Of_START_STATION_USE_SORT_T20" OPEN
+
+OPEN NUM_Of_START_STATION_USE_SORT_T20
+DELETE FIELD COUNT OK 
+DEFINE FIELD START_STATION_COUNT ACL         5  12 0 WIDTH 8  
+
+CLOSE NUM_Of_START_STATION_USE_SORT_T20
+OPEN NUM_Of_START_STATION_USE_SORT_T20
+
+
+
+OPEN NUM_Of_END_STATION_USE
+SORT ON COUNT D TO NUM_Of_END_STATION_USE_SORT
+OPEN NUM_Of_END_STATION_USE_SORT
+EXTRACT RECORD IF RECNO( ) <= 20 TO "NUM_Of_END_STATION_USE_SORT_T20" OPEN
+
+OPEN NUM_Of_END_STATION_USE_SORT_T20
+DELETE FIELD COUNT OK 
+DEFINE FIELD END_STATION_COUNT ACL         5  12 0 WIDTH 8  
+
+CLOSE NUM_Of_END_STATION_USE_SORT_T20
+OPEN NUM_Of_END_STATION_USE_SORT_T20
+
+
+OPEN CitiBike_Distance_Version
+OPEN Computed_Distance_to_station_and_total_trips SECONDARY
+JOIN PKEY Start_Station_Id End_Station_Id FIELDS Bikeid Birth_Year END_STATION_TOTAL Distance_S_to_E Circular End_Station_Id End_Station_Latitude End_Station_Longitude End_Station_Name Gender Geometry Lat_Test Large Mini_Hoop Name Number_of_Records Small Start_Station_Id__bin_ Start_Station_Id Start_Station_Latitude Start_Station_Longitude Start_Station_Name Starttime Station_Latitude Station_Longitude Stoptime Total_Rack Tripduration Usertype SKEY Start_Station_Id End_Station_Id WITH Distance_S_to_E TRIP_COUNT PRIMARY TO "TEMP_J_1" OPEN PRESORT SECSORT
+
+CLOSE SECONDARY
+
+OPEN TEMP_J_1
+OPEN NUM_Of_START_STATION_USE_SORT_T20 SECONDARY
+
+JOIN PKEY Start_Station_Id FIELDS Bikeid Birth_Year END_STATION_TOTAL Distance_S_to_E Circular End_Station_Id End_Station_Latitude End_Station_Longitude End_Station_Name Gender Geometry Lat_Test Large Mini_Hoop Name Number_of_Records Small Start_Station_Id__bin_ Start_Station_Id Start_Station_Latitude Start_Station_Longitude Start_Station_Name Starttime Station_Latitude Station_Longitude Stoptime Total_Rack Tripduration Usertype Distance_S_to_E2 TRIP_COUNT SKEY Start_Station_Id WITH START_STATION_COUNT PRIMARY TO "TEMP_J_2" OPEN PRESORT SECSORT
+OPEN TEMP_J_2
+
+
+
+CLOSE SECONDARY
+OPEN NUM_Of_END_STATION_USE_SORT_T20 SECONDARY
+JOIN PKEY End_Station_Id FIELDS Bikeid Birth_Year END_STATION_TOTAL Distance_S_to_E Circular End_Station_Id End_Station_Latitude End_Station_Longitude End_Station_Name Gender Geometry Lat_Test Large Mini_Hoop Name Number_of_Records Small Start_Station_Id__bin_ Start_Station_Id Start_Station_Latitude Start_Station_Longitude Start_Station_Name Starttime Station_Latitude Station_Longitude Stoptime Total_Rack Tripduration Usertype Distance_S_to_E2 TRIP_COUNT START_STATION_COUNT SKEY End_Station_Id WITH END_STATION_COUNT PRIMARY TO "FINAL_CityBike_Distance_With_Extras" OPEN PRESORT SECSORT
+
+
+CLOSE SECONDARY
+
+OPEN FINAL_CityBike_Distance_With_Extras
+
+
+COMMENT ******** END SCRIPT HERE ********
+
+COMMENT Change to remove temp tables
+COMMENT
+DELETE FORMAT CitiBike_Distance_Version_SORT OK
+DELETE CitiBike_Distance_Version_SORT.fil OK
+
+
+SET FOLDER /
+SET SAFETY ON
+
+
+^FORMAT   CitiBike_Distance_Version                                           CitiBike_Distance_Version                                         "" "CitiBike_Distance_Version.fil" 0 ASCII 
+[PARENT_FOLDER_ID] 1555696672
+[RETRIEVE] 0
+[REFRESH] DELIMITED "CitiBike_Distance_Version.fil" FROM "K:\Dan_Boulden\Homework_Tableau\Instructions\DATA\From_Tableau\citibike_201801_TO_201902_tripdata_Distance_Version.csv" 0 SEPARATOR "," QUALIFIER NONE CONSECUTIVE STARTLINE 1 KEEPTITLE FIELD "Bikeid" C AT 1 DEC 0 WID 5 PIC "" AS "" FIELD "Birth_Year" C AT 6 DEC 0 WID 4 PIC "" AS "" FIELD "END_STATION_TOTAL" C AT 10 DEC 9 WID 12 PIC "" AS "" FIELD "Distance_S_to_E" N AT 22 DEC 9 WID 15 PIC "" AS "" FIELD "Circular" C AT 37 DEC 0 WID 1 PIC "" AS "" FIELD "End_Station_Id" C AT 38 DEC 0 WID 4 PIC "" AS "" FIELD "End_Station_Latitude" C AT 42 DEC 9 WID 12 PIC "" AS "" FIELD "End_Station_Longitude" C AT 54 DEC 9 WID 13 PIC "" AS "" FIELD "End_Station_Name" C AT 67 DEC 0 WID 45 PIC "" AS "" FIELD "Gender" C AT 112 DEC 0 WID 1 PIC "" AS "" FIELD "Geometry" C AT 113 DEC 0 WID 1 PIC "" AS "" FIELD "Lat_Test" C AT 114 DEC 9 WID 12 PIC "" AS "" FIELD "Large" C AT 126 DEC 0 WID 1 PIC "" AS "" FIELD "Mini_Hoop" C AT 127 DEC 0 WID 1 PIC "" AS "" FIELD "Name" C AT 128 DEC 0 WID 1 PIC "" AS "" FIELD "Number_of_Records" C AT 129 DEC 0 WID 1 PIC "" AS "" FIELD "Small" C AT 130 DEC 0 WID 1 PIC "" AS "" FIELD "Start_Station_Id__bin_" C AT 131 DEC 0 WID 4 PIC "" AS "" FIELD "Start_Station_Id" C AT 135 DEC 0 WID 4 PIC "" AS "" FIELD "Start_Station_Latitude" C AT 139 DEC 9 WID 12 PIC "" AS "" FIELD "Start_Station_Longitude" C AT 151 DEC 9 WID 13 PIC "" AS "" FIELD "Start_Station_Name" C AT 164 DEC 0 WID 45 PIC "" AS "" FIELD "Starttime" D AT 209 DEC 0 WID 22 PIC "MM/DD/YYYY hh:mm:ss AM" AS "" FIELD "Station_Latitude" C AT 231 DEC 9 WID 12 PIC "" AS "" FIELD "Station_Longitude" C AT 243 DEC 9 WID 13 PIC "" AS "" FIELD "Stoptime" D AT 256 DEC 0 WID 22 PIC "MM/DD/YYYY hh:MM:ss AM" AS "" FIELD "Total_Rack" C AT 278 DEC 0 WID 1 PIC "" AS "" FIELD "Tripduration" C AT 279 DEC 0 WID 8 PIC "" AS "" FIELD "Usertype" C AT 287 DEC 0 WID 10 PIC "" AS "" 
+^FORMAT   CitiBike_Distance_Version_SORT                                      CitiBike_Distance_Version_SORT                                    "" "CitiBike_Distance_Version_SORT.FIL" 0 ASCII 
+[PARENT_FOLDER_ID] 1555696678
+~.04/19/2019   15:42:19 CitiBike_Distance_Version SORT ON Start_Station_Id End_Station_Id TO CitiBike_Distance_Version_SORT
+~Input : Records:19459370    Control Total:0                    
+~Output: Records:19459370    Control Total:0                    
+^FORMAT   Computed_Distance_to_station_and_total_trips                        Computed_Distance_to_station_and_total_trips                      "" "Computed_Distance_to_station_and_total_trips.FIL" 0 ASCII 
+[PARENT_FOLDER_ID] 1555696686
+~.04/19/2019   15:42:19 CitiBike_Distance_Version SORT ON Start_Station_Id End_Station_Id TO CitiBike_Distance_Version_SORT
+~Input : Records:19459370    Control Total:0                    
+~Output: Records:19459370    Control Total:0                    
+~.04/19/2019   15:42:39 CitiBike_Distance_Version_SORT SUMMARIZE ON Start_Station_Id End_Station_Id SUBTOTAL Distance_S_to_E Tripduration TO "Computed_Distance_to_station_and_total_trips.FIL"
+~Input : Records:19459370    Control Total:0                    
+~Output: Records:358213      Control Total:0                    
+^FORMAT   NUM_Of_START_STATION_USE                                            NUM_Of_START_STATION_USE                                          "" "NUM_Of_START_STATION_USE.FIL" 0 ASCII 
+[PARENT_FOLDER_ID] 1555696686
+~.04/19/2019   15:43:37 CitiBike_Distance_Version SUMMARIZE ON Start_Station_Id OTHER Start_Station_Id Start_Station_Latitude Start_Station_Longitude Start_Station_Name TO "NUM_Of_START_STATION_USE.FIL" PRESORT
+~Input : Records:19459370    Control Total:0                    
+~Output: Records:831         Control Total:0                    
+^FORMAT   NUM_Of_END_STATION_USE                                              NUM_Of_END_STATION_USE                                            "" "NUM_Of_END_STATION_USE.FIL" 0 ASCII 
+[PARENT_FOLDER_ID] 1555696686
+~.04/19/2019   15:44:25 CitiBike_Distance_Version SUMMARIZE ON End_Station_Id OTHER End_Station_Id End_Station_Latitude End_Station_Longitude End_Station_Name TO "NUM_Of_END_STATION_USE.FIL" PRESORT
+~Input : Records:19459370    Control Total:0                    
+~Output: Records:864         Control Total:0                    
+^FORMAT   NUM_Of_START_STATION_USE_SORT                                       NUM_Of_START_STATION_USE_SORT                                     "" "NUM_Of_START_STATION_USE_SORT.FIL" 0 ASCII 
+[PARENT_FOLDER_ID] 1555696686
+~.04/19/2019   15:43:37 CitiBike_Distance_Version SUMMARIZE ON Start_Station_Id OTHER Start_Station_Id Start_Station_Latitude Start_Station_Longitude Start_Station_Name TO "NUM_Of_START_STATION_USE.FIL" PRESORT
+~Input : Records:19459370    Control Total:0                    
+~Output: Records:831         Control Total:0                    
+~.04/19/2019   15:44:25 NUM_Of_START_STATION_USE SORT ON COUNT D TO NUM_Of_START_STATION_USE_SORT
+~Input : Records:831         Control Total:0                    
+~Output: Records:831         Control Total:0                    
+^FORMAT   NUM_Of_START_STATION_USE_SORT_T20                                   NUM_Of_START_STATION_USE_SORT_T20                                 "" "NUM_Of_START_STATION_USE_SORT_T20.FIL" 0 ASCII 
+[PARENT_FOLDER_ID] 1555696686
+~.04/19/2019   15:43:37 CitiBike_Distance_Version SUMMARIZE ON Start_Station_Id OTHER Start_Station_Id Start_Station_Latitude Start_Station_Longitude Start_Station_Name TO "NUM_Of_START_STATION_USE.FIL" PRESORT
+~Input : Records:19459370    Control Total:0                    
+~Output: Records:831         Control Total:0                    
+~.04/19/2019   15:44:25 NUM_Of_START_STATION_USE SORT ON COUNT D TO NUM_Of_START_STATION_USE_SORT
+~Input : Records:831         Control Total:0                    
+~Output: Records:831         Control Total:0                    
+~.04/19/2019   15:44:25 NUM_Of_START_STATION_USE_SORT EXTRACT RECORD IF RECNO( ) <= 20 TO "NUM_Of_START_STATION_USE_SORT_T20" OPEN
+~Input : Records:831         Control Total:0                    
+~Output: Records:20          Control Total:0                    
+^FORMAT   NUM_Of_END_STATION_USE_SORT                                         NUM_Of_END_STATION_USE_SORT                                       "" "NUM_Of_END_STATION_USE_SORT.FIL" 0 ASCII 
+[PARENT_FOLDER_ID] 1555696686
+~.04/19/2019   15:44:25 CitiBike_Distance_Version SUMMARIZE ON End_Station_Id OTHER End_Station_Id End_Station_Latitude End_Station_Longitude End_Station_Name TO "NUM_Of_END_STATION_USE.FIL" PRESORT
+~Input : Records:19459370    Control Total:0                    
+~Output: Records:864         Control Total:0                    
+~.04/19/2019   15:44:25 NUM_Of_END_STATION_USE SORT ON COUNT D TO NUM_Of_END_STATION_USE_SORT
+~Input : Records:864         Control Total:0                    
+~Output: Records:864         Control Total:0                    
+^FORMAT   NUM_Of_END_STATION_USE_SORT_T20                                     NUM_Of_END_STATION_USE_SORT_T20                                   "" "NUM_Of_END_STATION_USE_SORT_T20.FIL" 0 ASCII 
+[PARENT_FOLDER_ID] 1555696686
+~.04/19/2019   15:44:25 CitiBike_Distance_Version SUMMARIZE ON End_Station_Id OTHER End_Station_Id End_Station_Latitude End_Station_Longitude End_Station_Name TO "NUM_Of_END_STATION_USE.FIL" PRESORT
+~Input : Records:19459370    Control Total:0                    
+~Output: Records:864         Control Total:0                    
+~.04/19/2019   15:44:25 NUM_Of_END_STATION_USE SORT ON COUNT D TO NUM_Of_END_STATION_USE_SORT
+~Input : Records:864         Control Total:0                    
+~Output: Records:864         Control Total:0                    
+~.04/19/2019   15:44:25 NUM_Of_END_STATION_USE_SORT EXTRACT RECORD IF RECNO( ) <= 20 TO "NUM_Of_END_STATION_USE_SORT_T20" OPEN
+~Input : Records:864         Control Total:0                    
+~Output: Records:20          Control Total:0                    
+^FORMAT   TEMP_J_1                                                            TEMP_J_1                                                          "" "TEMP_J_1.FIL" 0 ASCII 
+[PARENT_FOLDER_ID] 1555696686
+~.04/19/2019   15:54:34 CitiBike_Distance_Version OPEN Computed_Distance_to_station_and_total_trips SECONDARY
+~.04/19/2019   15:54:34 CitiBike_Distance_Version JOIN PKEY Start_Station_Id End_Station_Id FIELDS ALL SKEY Start_Station_Id End_Station_Id WITH Distance_S_to_E TRIP_COUNT TOTAL_Tripduration PRIMARY TO "TEMP_J_1" OPEN PRESORT SECSORT
+~Input : Records:19459370    Control Total:0                    
+~Output: Records:19459370    Control Total:0                    
+^FORMAT   TEMP_J_2                                                            TEMP_J_2                                                          "" "TEMP_J_2.FIL" 0 ASCII 
+[PARENT_FOLDER_ID] 1555696686
+~.04/19/2019   15:54:34 CitiBike_Distance_Version OPEN Computed_Distance_to_station_and_total_trips SECONDARY
+~.04/19/2019   15:54:34 CitiBike_Distance_Version JOIN PKEY Start_Station_Id End_Station_Id FIELDS ALL SKEY Start_Station_Id End_Station_Id WITH Distance_S_to_E TRIP_COUNT TOTAL_Tripduration PRIMARY TO "TEMP_J_1" OPEN PRESORT SECSORT
+~Input : Records:19459370    Control Total:0                    
+~Output: Records:19459370    Control Total:0                    
+~.04/19/2019   16:05:24 TEMP_J_1 OPEN NUM_Of_START_STATION_USE_SORT_T20 SECONDARY
+~.04/19/2019   16:05:24 TEMP_J_1 JOIN PKEY Start_Station_Id FIELDS ALL SKEY Start_Station_Id WITH START_STATION_COUNT PRIMARY TO "TEMP_J_2" OPEN PRESORT SECSORT
+~Input : Records:19459370    Control Total:0                    
+~Output: Records:19459370    Control Total:0                    
+^BATCH    S_SUM_TO_TRIPS_Tripduration                                         
+[PARENT_FOLDER_ID] 1555702296
+COMMENT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Imports RAW data and creates outputs
+SCRIPT NAME: S_SUM_TO_TRIPS
+SCRIPT DISCRIPTION: This is the script template
+WRITTEN BY: Dan Boulden 04/2019
+VERSION: 1.0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+END
+
+SET SAFETY OFF
+SET FOLDER /RAW
+
+COMMENT ******** START SCRIPT HERE ********
+OPEN TEST
+IMPORT DELIMITED TO CitiBike_Distance_Version "CitiBike_Distance_Version.fil" FROM "K:\Dan_Boulden\Homework_Tableau\Instructions\DATA\From_Tableau\citibike_201801_TO_201902_tripdata_Distance_Version.csv" 0 SEPARATOR "," QUALIFIER NONE CONSECUTIVE STARTLINE 1 KEEPTITLE FIELD "Bikeid" C AT 1 DEC 0 WID 5 PIC "" AS "" FIELD "Birth_Year" C AT 6 DEC 0 WID 4 PIC "" AS "" FIELD "END_STATION_TOTAL" C AT 10 DEC 9 WID 12 PIC "" AS "" FIELD "Distance_S_to_E" N AT 22 DEC 9 WID 15 PIC "" AS "" FIELD "Circular" C AT 37 DEC 0 WID 1 PIC "" AS "" FIELD "End_Station_Id" C AT 38 DEC 0 WID 4 PIC "" AS "" FIELD "End_Station_Latitude" C AT 42 DEC 9 WID 12 PIC "" AS "" FIELD "End_Station_Longitude" C AT 54 DEC 9 WID 13 PIC "" AS "" FIELD "End_Station_Name" C AT 67 DEC 0 WID 45 PIC "" AS "" FIELD "Gender" C AT 112 DEC 0 WID 1 PIC "" AS "" FIELD "Geometry" C AT 113 DEC 0 WID 1 PIC "" AS "" FIELD "Lat_Test" C AT 114 DEC 9 WID 12 PIC "" AS "" FIELD "Large" C AT 126 DEC 0 WID 1 PIC "" AS "" FIELD "Mini_Hoop" C AT 127 DEC 0 WID 1 PIC "" AS "" FIELD "Name" C AT 128 DEC 0 WID 1 PIC "" AS "" FIELD "Number_of_Records" C AT 129 DEC 0 WID 1 PIC "" AS "" FIELD "Small" C AT 130 DEC 0 WID 1 PIC "" AS "" FIELD "Start_Station_Id__bin_" C AT 131 DEC 0 WID 4 PIC "" AS "" FIELD "Start_Station_Id" C AT 135 DEC 0 WID 4 PIC "" AS "" FIELD "Start_Station_Latitude" C AT 139 DEC 9 WID 12 PIC "" AS "" FIELD "Start_Station_Longitude" C AT 151 DEC 9 WID 13 PIC "" AS "" FIELD "Start_Station_Name" C AT 164 DEC 0 WID 45 PIC "" AS "" FIELD "Starttime" D AT 209 DEC 0 WID 22 PIC "MM/DD/YYYY hh:mm:ss AM" AS "" FIELD "Station_Latitude" C AT 231 DEC 9 WID 12 PIC "" AS "" FIELD "Station_Longitude" C AT 243 DEC 9 WID 13 PIC "" AS "" FIELD "Stoptime" D AT 256 DEC 0 WID 22 PIC "MM/DD/YYYY hh:MM:ss AM" AS "" FIELD "Total_Rack" C AT 278 DEC 0 WID 1 PIC "" AS "" FIELD "Tripduration" C AT 279 DEC 0 WID 8 PIC "" AS "" FIELD "Usertype" C AT 287 DEC 0 WID 10 PIC "" AS "" 
+
+
+OPEN CitiBike_Distance_Version
+DELETE FIELD Tripduration OK 
+DEFINE FIELD Tripduration   NUMERIC   279   8 0 WIDTH 8  
+CLOSE CitiBike_Distance_Version
+OPEN CitiBike_Distance_Version
+
+SET FOLDER /TEMP
+
+COMMENT Presorted to speed up the SUMMARIZE.
+OPEN CitiBike_Distance_Version
+SORT ON Start_Station_Id End_Station_Id TO CitiBike_Distance_Version_SORT
+
+
+SET FOLDER /WORKING
+OPEN CitiBike_Distance_Version_SORT
+SUMMARIZE ON Start_Station_Id End_Station_Id SUBTOTAL Distance_S_to_E Tripduration TO "Computed_Distance_to_station_and_total_trips.FIL"
+
+OPEN Computed_Distance_to_station_and_total_trips
+
+
+DELETE FIELD Tripduration OK 
+DEFINE FIELD TOTAL_Tripduration ACL        21  12 0  
+
+DELETE FIELD COUNT OK 
+DEFINE FIELD TRIP_COUNT     ACL        33  12 0 WIDTH 8  
+
+
+CLOSE Computed_Distance_to_station_and_total_trips
+OPEN Computed_Distance_to_station_and_total_trips
+
+OPEN CitiBike_Distance_Version
+SUMMARIZE ON Start_Station_Id OTHER Start_Station_Id Start_Station_Latitude Start_Station_Longitude Start_Station_Name TO "NUM_Of_START_STATION_USE.FIL" PRESORT
+
+SUMMARIZE ON End_Station_Id OTHER End_Station_Id End_Station_Latitude End_Station_Longitude End_Station_Name TO "NUM_Of_END_STATION_USE.FIL" PRESORT
+
+OPEN NUM_Of_START_STATION_USE
+SORT ON COUNT D TO NUM_Of_START_STATION_USE_SORT
+OPEN NUM_Of_START_STATION_USE_SORT
+EXTRACT RECORD IF RECNO( ) <= 20 TO "NUM_Of_START_STATION_USE_SORT_T20" OPEN
+
+OPEN NUM_Of_START_STATION_USE_SORT_T20
+DELETE FIELD COUNT OK 
+DEFINE FIELD START_STATION_COUNT ACL         5  12 0 WIDTH 8  
+
+CLOSE NUM_Of_START_STATION_USE_SORT_T20
+OPEN NUM_Of_START_STATION_USE_SORT_T20
+
+
+
+OPEN NUM_Of_END_STATION_USE
+SORT ON COUNT D TO NUM_Of_END_STATION_USE_SORT
+OPEN NUM_Of_END_STATION_USE_SORT
+EXTRACT RECORD IF RECNO( ) <= 20 TO "NUM_Of_END_STATION_USE_SORT_T20" OPEN
+
+OPEN NUM_Of_END_STATION_USE_SORT_T20
+DELETE FIELD COUNT OK 
+DEFINE FIELD END_STATION_COUNT ACL         5  12 0 WIDTH 8  
+
+CLOSE NUM_Of_END_STATION_USE_SORT_T20
+OPEN NUM_Of_END_STATION_USE_SORT_T20
+
+
+OPEN CitiBike_Distance_Version
+OPEN Computed_Distance_to_station_and_total_trips SECONDARY
+JOIN PKEY Start_Station_Id End_Station_Id FIELDS ALL SKEY Start_Station_Id End_Station_Id WITH Distance_S_to_E TRIP_COUNT TOTAL_Tripduration PRIMARY TO "TEMP_J_1" OPEN PRESORT SECSORT
+
+CLOSE SECONDARY
+
+OPEN TEMP_J_1
+OPEN NUM_Of_START_STATION_USE_SORT_T20 SECONDARY
+
+JOIN PKEY Start_Station_Id FIELDS ALL SKEY Start_Station_Id WITH START_STATION_COUNT PRIMARY TO "TEMP_J_2" OPEN PRESORT SECSORT
+OPEN TEMP_J_2
+
+SET FOLDER /FINAL
+
+CLOSE SECONDARY
+OPEN NUM_Of_END_STATION_USE_SORT_T20 SECONDARY
+JOIN PKEY End_Station_Id FIELDS ALL SKEY End_Station_Id WITH END_STATION_COUNT PRIMARY TO "FINAL_CityBike_Distance_With_Extras" OPEN PRESORT SECSORT
+
+
+CLOSE SECONDARY
+
+OPEN FINAL_CityBike_Distance_With_Extras
+
+EXPORT FIELDS Bikeid Birth_Year END_STATION_TOTAL Distance_S_to_E End_Station_Id End_Station_Latitude End_Station_Longitude End_Station_Name Gender Lat_Test Number_of_Records Start_Station_Id Start_Station_Latitude Start_Station_Longitude Start_Station_Name Starttime Station_Latitude Station_Longitude Stoptime Tripduration Usertype Distance_S_to_E2 TRIP_COUNT TOTAL_Tripduration START_STATION_COUNT END_STATION_COUNT DELIMITED TO "K:\Dan_Boulden\Homework_Tableau\Instructions\DATA\From_ACL\FINAL_City_Bike_Distance_With_Extras" KEEPTITLE SEPARATOR "|" QUALIFIER '"'
+
+
+
+COMMENT ******** END SCRIPT HERE ********
+
+COMMENT Change to remove temp tables
+COMMENT
+DELETE FORMAT CitiBike_Distance_Version_SORT OK
+DELETE CitiBike_Distance_Version_SORT.fil OK
+
+
+SET FOLDER /
+SET SAFETY ON
+
+
+^REPORT   Default_View                                                        FINAL_CityBike_Distance_With_Extras                               D.T,
+[SKIP] 0
+[TLINES] 1
+[RLINES] 1
+[LINE] 1
+Bikeid               WIDTH 8 PICTURE ""
+[LINE] 1
+Birth_Year           WIDTH 10 PICTURE ""
+[LINE] 1
+END_STATION_TOTAL    WIDTH 18 PICTURE ""
+[LINE] 1
+Distance_S_to_E      WIDTH 14 PICTURE ""
+[LINE] 1
+Circular             WIDTH 8 PICTURE ""
+[LINE] 1
+End_Station_Id       WIDTH 13 PICTURE ""
+[LINE] 1
+End_Station_Latitude WIDTH 17 PICTURE ""
+[LINE] 1
+End_Station_Longitude WIDTH 19 PICTURE ""
+[LINE] 1
+End_Station_Name     WIDTH 16 PICTURE ""
+[LINE] 1
+Gender               WIDTH 8 PICTURE ""
+[LINE] 1
+Geometry             WIDTH 10 PICTURE ""
+[LINE] 1
+Lat_Test             WIDTH 9 PICTURE ""
+[LINE] 1
+Large                WIDTH 7 PICTURE ""
+[LINE] 1
+Mini_Hoop            WIDTH 11 PICTURE ""
+[LINE] 1
+Name                 WIDTH 7 PICTURE ""
+[LINE] 1
+Number_of_Records    WIDTH 17 PICTURE ""
+[LINE] 1
+Small                WIDTH 7 PICTURE ""
+[LINE] 1
+Start_Station_Id__bin_ WIDTH 18 PICTURE ""
+[LINE] 1
+Start_Station_Id     WIDTH 14 PICTURE ""
+[LINE] 1
+Start_Station_Latitude WIDTH 18 PICTURE ""
+[LINE] 1
+Start_Station_Longitude WIDTH 19 PICTURE ""
+[LINE] 1
+Start_Station_Name   WIDTH 16 PICTURE ""
+[LINE] 1
+Starttime            WIDTH 15 PICTURE ""
+[LINE] 1
+Station_Latitude     WIDTH 14 PICTURE ""
+[LINE] 1
+Station_Longitude    WIDTH 16 PICTURE ""
+[LINE] 1
+Stoptime             WIDTH 15 PICTURE ""
+[LINE] 1
+Total_Rack           WIDTH 10 PICTURE ""
+[LINE] 1
+Tripduration         WIDTH 12 PICTURE ""
+[LINE] 1
+Usertype             WIDTH 9 PICTURE ""
+[LINE] 1
+Distance_S_to_E2     WIDTH 14 PICTURE ""
+[LINE] 1
+TRIP_COUNT           WIDTH 12 PICTURE ""
+[LINE] 1
+TOTAL_Tripduration   WIDTH 17 PICTURE ""
+[LINE] 1
+START_STATION_COUNT  WIDTH 19 PICTURE ""
+[LINE] 1
+END_STATION_COUNT    WIDTH 18 PICTURE ""
+^FORMAT   FINAL_CityBike_Distance_With_Extras                                 FINAL_CityBike_Distance_With_Extras                               "" "FINAL_CityBike_Distance_With_Extras.FIL" 0 ASCII 
+[PARENT_FOLDER_ID] 1555702278
+~.04/19/2019   15:54:34 CitiBike_Distance_Version OPEN Computed_Distance_to_station_and_total_trips SECONDARY
+~.04/19/2019   15:54:34 CitiBike_Distance_Version JOIN PKEY Start_Station_Id End_Station_Id FIELDS ALL SKEY Start_Station_Id End_Station_Id WITH Distance_S_to_E TRIP_COUNT TOTAL_Tripduration PRIMARY TO "TEMP_J_1" OPEN PRESORT SECSORT
+~Input : Records:19459370    Control Total:0                    
+~Output: Records:19459370    Control Total:0                    
+~.04/19/2019   16:05:24 TEMP_J_1 OPEN NUM_Of_START_STATION_USE_SORT_T20 SECONDARY
+~.04/19/2019   16:05:24 TEMP_J_1 JOIN PKEY Start_Station_Id FIELDS ALL SKEY Start_Station_Id WITH START_STATION_COUNT PRIMARY TO "TEMP_J_2" OPEN PRESORT SECSORT
+~Input : Records:19459370    Control Total:0                    
+~Output: Records:19459370    Control Total:0                    
+~.04/19/2019   16:16:53 TEMP_J_2 OPEN NUM_Of_END_STATION_USE_SORT_T20 SECONDARY
+~.04/19/2019   16:16:53 TEMP_J_2 JOIN PKEY End_Station_Id FIELDS ALL SKEY End_Station_Id WITH END_STATION_COUNT PRIMARY TO "FINAL_CityBike_Distance_With_Extras" OPEN PRESORT SECSORT
+~Input : Records:19459370    Control Total:0                    
+~Output: Records:19459370    Control Total:0                    
+[LASTVIEW] "Default_View"
+^OPEN b,F,S_SUM_TO_TRIPS_Tripduration;f,F,FINAL_CityBike_Distance_With_Extras;

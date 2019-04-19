@@ -1,0 +1,775 @@
+@@ Log File C:\DAN\Bootcamp\DAN BootCamp\TABLEAU\20-Tableau\Homework_Tableau\Instructions\The_Work\ACL\Bootcamp_Tableau_Homework_Dan_Boulden.LOG Opened at $$5cb9cf51 09:38:25 on 04/19/2019  
+@ IMPORT DELIMITED TO TEST "TEST.fil" FROM "C:\DAN\Bootcamp\DAN BootCamp\TABLEAU\20-Tableau\Homework_Tableau\Instructions\DATA\From_Tableau\citibike_201801_TO_201902_tripdata_BIG_VERSION Extract.csv" 0 SEPARATOR "," QUALIFIER NONE CONSECUTIVE STARTLINE 1 KEEPTITLE FIELD "Distance" C AT 1 DEC 0 WID 1 PIC "" AS "" FIELD "Station_Latitude" C AT 2 DEC 9 WID 12 PIC "" AS "" FIELD "Station_Longitude" C AT 14 DEC 9 WID 13 PIC "" AS "" FIELD "LAT_TEST" C AT 27 DEC 9 WID 12 PIC "" AS "" FIELD "Geometry" C AT 39 DEC 0 WID 1 PIC "" AS "" FIELD "Name" C AT 40 DEC 0 WID 1 PIC "" AS "" FIELD "Number_of_Records" N AT 41 DEC 0 WID 1 PIC "" AS "" FIELD "Start_Station_Id__bin_" C AT 42 DEC 0 WID 4 PIC "" AS "" FIELD "Bikeid" N AT 46 DEC 0 WID 5 PIC "" AS "" FIELD "Birth_Year" N AT 51 DEC 0 WID 4 PIC "" AS "" FIELD "Circular" C AT 55 DEC 0 WID 1 PIC "" AS "" FIELD "End_Station_Id" N AT 56 DEC 0 WID 4 PIC "" AS "" FIELD "End_Station_Latitude" C AT 60 DEC 9 WID 12 PIC "" AS "" FIELD "End_Station_Longitude" C AT 72 DEC 9 WID 13 PIC "" AS "" FIELD "End_Station_Name" C AT 85 DEC 0 WID 45 PIC "" AS "" FIELD "Gender" N AT 130 DEC 0 WID 1 PIC "" AS "" FIELD "Large" C AT 131 DEC 0 WID 1 PIC "" AS "" FIELD "Mini_Hoop" C AT 132 DEC 0 WID 1 PIC "" AS "" FIELD "Small" C AT 133 DEC 0 WID 1 PIC "" AS "" FIELD "Start_Station_Id" N AT 134 DEC 0 WID 4 PIC "" AS "" FIELD "Start_Station_Latitude" C AT 138 DEC 9 WID 12 PIC "" AS "" FIELD "Start_Station_Longitude" C AT 150 DEC 9 WID 13 PIC "" AS "" FIELD "Start_Station_Name" C AT 163 DEC 0 WID 45 PIC "" AS "" FIELD "Starttime" D AT 208 DEC 0 WID 22 PIC "MM/DD/YYYY hh:mm:ss" AS "" FIELD "Stoptime" D AT 230 DEC 0 WID 22 PIC "MM/DD/YYYY hh:MM:ss" AS "" FIELD "Total_Rack" C AT 252 DEC 0 WID 1 PIC "" AS "" FIELD "Tripduration" N AT 253 DEC 0 WID 8 PIC "" AS "" FIELD "Usertype" C AT 261 DEC 0 WID 10 PIC "" AS "" 
+09:47:41 - 04/19/2019  
+@ OPEN TEST
+09:47:42 - 04/19/2019  
+28 fields activated
+Opening file name TEST.fil as supplied in the table layout.
+@@ Log File K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\Bootcamp_Tableau_Homework_Dan_Boulden.LOG Opened at $$5cb9ebf3 11:40:35 on 04/19/2019  
+@ OPEN TEST
+11:40:35 - 04/19/2019  
+28 fields activated
+Opening file name TEST.fil as supplied in the table layout.
+@ IMPORT DELIMITED TO CitiBike_Distance_Version "CitiBike_Distance_Version.fil" FROM "K:\Dan_Boulden\Homework_Tableau\Instructions\DATA\From_Tableau\citibike_201801_TO_201902_tripdata_Distance_Version.csv" 0 SEPARATOR "," QUALIFIER NONE CONSECUTIVE STARTLINE 1 KEEPTITLE FIELD "Bikeid" C AT 1 DEC 0 WID 5 PIC "" AS "" FIELD "Birth_Year" C AT 6 DEC 0 WID 4 PIC "" AS "" FIELD "END_STATION_TOTAL" C AT 10 DEC 9 WID 12 PIC "" AS "" FIELD "Distance_S_to_E" N AT 22 DEC 9 WID 15 PIC "" AS "" FIELD "Circular" C AT 37 DEC 0 WID 1 PIC "" AS "" FIELD "End_Station_Id" C AT 38 DEC 0 WID 4 PIC "" AS "" FIELD "End_Station_Latitude" C AT 42 DEC 9 WID 12 PIC "" AS "" FIELD "End_Station_Longitude" C AT 54 DEC 9 WID 13 PIC "" AS "" FIELD "End_Station_Name" C AT 67 DEC 0 WID 45 PIC "" AS "" FIELD "Gender" C AT 112 DEC 0 WID 1 PIC "" AS "" FIELD "Geometry" C AT 113 DEC 0 WID 1 PIC "" AS "" FIELD "Lat_Test" C AT 114 DEC 9 WID 12 PIC "" AS "" FIELD "Large" C AT 126 DEC 0 WID 1 PIC "" AS "" FIELD "Mini_Hoop" C AT 127 DEC 0 WID 1 PIC "" AS "" FIELD "Name" C AT 128 DEC 0 WID 1 PIC "" AS "" FIELD "Number_of_Records" C AT 129 DEC 0 WID 1 PIC "" AS "" FIELD "Small" C AT 130 DEC 0 WID 1 PIC "" AS "" FIELD "Start_Station_Id__bin_" C AT 131 DEC 0 WID 4 PIC "" AS "" FIELD "Start_Station_Id" C AT 135 DEC 0 WID 4 PIC "" AS "" FIELD "Start_Station_Latitude" C AT 139 DEC 9 WID 12 PIC "" AS "" FIELD "Start_Station_Longitude" C AT 151 DEC 9 WID 13 PIC "" AS "" FIELD "Start_Station_Name" C AT 164 DEC 0 WID 45 PIC "" AS "" FIELD "Starttime" D AT 209 DEC 0 WID 22 PIC "MM/DD/YYYY hh:mm:ss AM" AS "" FIELD "Station_Latitude" C AT 231 DEC 9 WID 12 PIC "" AS "" FIELD "Station_Longitude" C AT 243 DEC 9 WID 13 PIC "" AS "" FIELD "Stoptime" D AT 256 DEC 0 WID 22 PIC "MM/DD/YYYY hh:MM:ss AM" AS "" FIELD "Total_Rack" C AT 278 DEC 0 WID 1 PIC "" AS "" FIELD "Tripduration" C AT 279 DEC 0 WID 8 PIC "" AS "" FIELD "Usertype" C AT 287 DEC 0 WID 10 PIC "" AS "" 
+11:53:34 - 04/19/2019  
+@ OPEN CitiBike_Distance_Version
+11:53:34 - 04/19/2019  
+29 fields activated
+Opening file name CitiBike_Distance_Version.fil as supplied in the table layout.
+@ SUMMARIZE ON Start_Station_Id End_Station_Id SUBTOTAL Distance_S_to_E OTHER Distance_S_to_E TO "Computed_Distance_to_station_and_total_trips.FIL" OPEN PRESORT STATISTICS MODMEDQ STDEV CPERCENT
+13:50:16 - 04/19/2019  
+Presorting data
+The Summarize operation cannot be completed because it exceeds the memory limit.
+You may be able to process up to 210674 of different keys.
+As an alternative, reduce the number of additional calculations performed on subtotal fields.
+Command Failed
+@ DO S_SUM_TO_TRIPS
+13:53:32 - 04/19/2019  
+@ OPEN CitiBike_Distance_Version
+13:53:32 - 04/19/2019  
+29 fields activated
+Opening file name CitiBike_Distance_Version.fil as supplied in the table layout.
+@ SUMMARIZE ON Start_Station_Id End_Station_Id SUBTOTAL Distance_S_to_E TO "Computed_Distance_to_station_and_total_trips.FIL" OPEN PRESORT
+13:53:32 - 04/19/2019  
+Presorting data
+358213 records produced
+Output to K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\Computed_Distance_to_station_and_total_trips.FIL is done
+Opening file "Computed_Distance_to_station_and_total_trips"
+@ OPEN "Computed_Distance_to_station_and_total_trips"
+13:54:02 - 04/19/2019  
+4 fields activated
+Opening file name Computed_Distance_to_station_and_total_trips.FIL as supplied in the table layout.
+
+
+@ COMMENT
+13:54:02 - 04/19/2019  
+OPEN CitiBike_Distance_Version
+SUMMARIZE ON Start_Station_Id End_Station_Id SUBTOTAL Distance_S_to_E TO "Computed_Distance_to_station_and_total_trips.FIL" OPEN PRESORT STATISTICS MODMEDQ STDEV CPERCENT
+@ COMMENT - Execution of S_SUM_TO_TRIPS  completed
+13:54:02 - 04/19/2019  
+@ OPEN Computed_Distance_to_station_and_total_trips
+13:58:15 - 04/19/2019  
+@ SET FOLDER /RAW
+13:58:15 - 04/19/2019  
+@ SET FOLDER /
+13:58:22 - 04/19/2019  
+@ CLOSE
+14:00:52 - 04/19/2019  
+@ DO S_SUM_TO_TRIPS
+14:00:57 - 04/19/2019  
+@ COMMENT
+14:00:57 - 04/19/2019  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Imports RAW data and creates outputs
+SCRIPT NAME: S_SUM_TO_TRIPS
+SCRIPT DISCRIPTION: This is the script template
+WRITTEN BY: Dan Boulden 04/2019
+VERSION: 1.0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+END
+
+@ SET SAFETY OFF
+14:00:57 - 04/19/2019  
+@ SET FOLDER /RAW
+14:00:57 - 04/19/2019  
+
+@ COMMENT ******** START SCRIPT HERE ********
+14:00:57 - 04/19/2019  
+@ OPEN TEST
+14:00:57 - 04/19/2019  
+28 fields activated
+Opening file name TEST.fil as supplied in the table layout.
+@ IMPORT DELIMITED TO CitiBike_Distance_Version "CitiBike_Distance_Version.fil" FROM "K:\Dan_Boulden\Homework_Tableau\Instructions\DATA\From_Tableau\citibike_201801_TO_201902_tripdata_Distance_Version.csv" 0 SEPARATOR "," QUALIFIER NONE CONSECUTIVE STARTLINE 1 KEEPTITLE FIELD "Bikeid" C AT 1 DEC 0 WID 5 PIC "" AS "" FIELD "Birth_Year" C AT 6 DEC 0 WID 4 PIC "" AS "" FIELD "END_STATION_TOTAL" C AT 10 DEC 9 WID 12 PIC "" AS "" FIELD "Distance_S_to_E" N AT 22 DEC 9 WID 15 PIC "" AS "" FIELD "Circular" C AT 37 DEC 0 WID 1 PIC "" AS "" FIELD "End_Station_Id" C AT 38 DEC 0 WID 4 PIC "" AS "" FIELD "End_Station_Latitude" C AT 42 DEC 9 WID 12 PIC "" AS "" FIELD "End_Station_Longitude" C AT 54 DEC 9 WID 13 PIC "" AS "" FIELD "End_Station_Name" C AT 67 DEC 0 WID 45 PIC "" AS "" FIELD "Gender" C AT 112 DEC 0 WID 1 PIC "" AS "" FIELD "Geometry" C AT 113 DEC 0 WID 1 PIC "" AS "" FIELD "Lat_Test" C AT 114 DEC 9 WID 12 PIC "" AS "" FIELD "Large" C AT 126 DEC 0 WID 1 PIC "" AS "" FIELD "Mini_Hoop" C AT 127 DEC 0 WID 1 PIC "" AS "" FIELD "Name" C AT 128 DEC 0 WID 1 PIC "" AS "" FIELD "Number_of_Records" C AT 129 DEC 0 WID 1 PIC "" AS "" FIELD "Small" C AT 130 DEC 0 WID 1 PIC "" AS "" FIELD "Start_Station_Id__bin_" C AT 131 DEC 0 WID 4 PIC "" AS "" FIELD "Start_Station_Id" C AT 135 DEC 0 WID 4 PIC "" AS "" FIELD "Start_Station_Latitude" C AT 139 DEC 9 WID 12 PIC "" AS "" FIELD "Start_Station_Longitude" C AT 151 DEC 9 WID 13 PIC "" AS "" FIELD "Start_Station_Name" C AT 164 DEC 0 WID 45 PIC "" AS "" FIELD "Starttime" D AT 209 DEC 0 WID 22 PIC "MM/DD/YYYY hh:mm:ss AM" AS "" FIELD "Station_Latitude" C AT 231 DEC 9 WID 12 PIC "" AS "" FIELD "Station_Longitude" C AT 243 DEC 9 WID 13 PIC "" AS "" FIELD "Stoptime" D AT 256 DEC 0 WID 22 PIC "MM/DD/YYYY hh:MM:ss AM" AS "" FIELD "Total_Rack" C AT 278 DEC 0 WID 1 PIC "" AS "" FIELD "Tripduration" C AT 279 DEC 0 WID 8 PIC "" AS "" FIELD "Usertype" C AT 287 DEC 0 WID 10 PIC "" AS ""
+14:00:57 - 04/19/2019  
+@ OPEN CitiBike_Distance_Version
+14:08:39 - 04/19/2019  
+29 fields activated
+Opening file name CitiBike_Distance_Version.fil as supplied in the table layout.
+
+@ SET FOLDER /TEMP
+14:08:39 - 04/19/2019  
+
+@ OPEN CitiBike_Distance_Version
+14:08:39 - 04/19/2019  
+29 fields activated
+Opening file name CitiBike_Distance_Version.fil as supplied in the table layout.
+@ SORT ON Start_Station_Id End_Station_Id TO CitiBike_Distance_Version_SORT
+14:08:39 - 04/19/2019  
+19459370 records produced
+Output to K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\CitiBike_Distance_Version_SORT.FIL is done
+
+
+@ SET FOLDER /WORKING
+14:11:29 - 04/19/2019  
+@ OPEN CitiBike_Distance_Version_SORT
+14:11:29 - 04/19/2019  
+29 fields activated
+Opening file name CitiBike_Distance_Version_SORT.FIL as supplied in the table layout.
+@ SUMMARIZE ON Start_Station_Id End_Station_Id SUBTOTAL Distance_S_to_E TO "Computed_Distance_to_station_and_total_trips.FIL" OPEN
+14:11:29 - 04/19/2019  
+358213 records produced
+Output to K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\Computed_Distance_to_station_and_total_trips.FIL is done
+Opening file "Computed_Distance_to_station_and_total_trips"
+@ OPEN "Computed_Distance_to_station_and_total_trips"
+14:11:50 - 04/19/2019  
+4 fields activated
+Opening file name Computed_Distance_to_station_and_total_trips.FIL as supplied in the table layout.
+
+
+
+@ OPEN CitiBike_Distance_Version_SORT
+14:11:50 - 04/19/2019  
+29 fields activated
+Opening file name CitiBike_Distance_Version_SORT.FIL as supplied in the table layout.
+@ SUMMARIZE ON Start_Station_Id End_Station_Id SUBTOTAL Distance_S_to_E TO "Computed_Distance_to_station_and_total_trips_EXTRA.FIL" OPEN STATISTICS MODMEDQ STDEV CPERCENT
+14:11:50 - 04/19/2019  
+The Summarize operation cannot be completed because it exceeds the memory limit.
+You may be able to process up to 276752 of different keys.
+As an alternative, reduce the number of additional calculations performed on subtotal fields.
+Command Failed
+@ COMMENT - Execution of S_SUM_TO_TRIPS  failed with 'SUMMARIZE ON Start_Station_Id End_Station_Id SUBTOTAL Distance_S_to_E TO "Computed_Distance_to_station_and_total_trips_EXTRA.FIL" OPEN STATISTICS MODMEDQ STDEV CPERCENT' command, Capture and Display current variables:
+14:13:22 - 04/19/2019  
+OUTPUTFOLDER         C "/WORKING"
+WRITE1               N 358,213
+Total string space available: 49
+@ CLOSE
+14:13:27 - 04/19/2019  
+@ OPEN CitiBike_Distance_Version
+14:14:16 - 04/19/2019  
+29 fields activated
+Opening file name CitiBike_Distance_Version.fil as supplied in the table layout.
+@ SUMMARIZE ON Start_Station_Id OTHER Start_Station_Id Start_Station_Latitude Start_Station_Longitude Start_Station_Name Total_Rack TO "NUM_Of_START_STATION_USE.FIL" OPEN PRESORT
+14:16:39 - 04/19/2019  
+Presorting data
+Command cancelled
+Command Failed
+@ CLOSE
+14:16:55 - 04/19/2019  
+@ OPEN CitiBike_Distance_Version
+14:17:26 - 04/19/2019  
+29 fields activated
+Opening file name CitiBike_Distance_Version.fil as supplied in the table layout.
+@ SET FOLDER /WORKING
+14:18:43 - 04/19/2019  
+@ OPEN CitiBike_Distance_Version_SORT
+14:18:47 - 04/19/2019  
+29 fields activated
+Opening file name CitiBike_Distance_Version_SORT.FIL as supplied in the table layout.
+@ SUMMARIZE ON Start_Station_Id End_Station_Id SUBTOTAL Distance_S_to_E TO "Computed_Distance_to_station_and_total_trips.FIL"
+14:18:55 - 04/19/2019  
+358213 records produced
+Output to K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\Computed_Distance_to_station_and_total_trips.FIL is done
+@ SUMMARIZE ON Start_Station_Id End_Station_Id SUBTOTAL Distance_S_to_E TO "Computed_Distance_to_station_and_total_trips.FIL"
+14:19:38 - 04/19/2019  
+358213 records produced
+Output to K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\Computed_Distance_to_station_and_total_trips.FIL is done
+@ OPEN CitiBike_Distance_Version
+14:19:52 - 04/19/2019  
+29 fields activated
+Opening file name CitiBike_Distance_Version.fil as supplied in the table layout.
+@ SUMMARIZE ON Start_Station_Id OTHER Start_Station_Id Start_Station_Latitude Start_Station_Longitude Start_Station_Name TO "NUM_Of_START_STATION_USE.FIL" PRESORT
+14:19:57 - 04/19/2019  
+Presorting data
+831 records produced
+Output to K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\NUM_Of_START_STATION_USE.FIL is done
+@ SUMMARIZE ON End_Station_Id OTHER End_Station_Id End_Station_Latitude End_Station_Longitude End_Station_Name TO "NUM_Of_START_STATION_USE.FIL" PRESORT
+14:21:09 - 04/19/2019  
+Presorting data
+864 records produced
+Output to K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\NUM_Of_START_STATION_USE.FIL is done
+@ SUMMARIZE ON Start_Station_Id OTHER Start_Station_Id Start_Station_Latitude Start_Station_Longitude Start_Station_Name TO "NUM_Of_START_STATION_USE.FIL" PRESORT
+14:22:46 - 04/19/2019  
+Presorting data
+831 records produced
+Output to K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\NUM_Of_START_STATION_USE.FIL is done
+@ SUMMARIZE ON End_Station_Id OTHER End_Station_Id End_Station_Latitude End_Station_Longitude End_Station_Name TO "NUM_Of_END_STATION_USE.FIL" PRESORT
+14:23:41 - 04/19/2019  
+Presorting data
+864 records produced
+Output to K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\NUM_Of_END_STATION_USE.FIL is done
+@ OPEN Computed_Distance_to_station_and_total_trips
+14:25:22 - 04/19/2019  
+4 fields activated
+Opening file name Computed_Distance_to_station_and_total_trips.FIL as supplied in the table layout.
+@ OPEN NUM_Of_END_STATION_USE
+14:25:28 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_END_STATION_USE.FIL as supplied in the table layout.
+@ OPEN NUM_Of_START_STATION_USE
+14:25:31 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_START_STATION_USE.FIL as supplied in the table layout.
+@ OPEN NUM_Of_END_STATION_USE
+14:25:32 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_END_STATION_USE.FIL as supplied in the table layout.
+@ OPEN NUM_Of_START_STATION_USE
+14:25:33 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_START_STATION_USE.FIL as supplied in the table layout.
+@ OPEN Computed_Distance_to_station_and_total_trips
+14:25:35 - 04/19/2019  
+4 fields activated
+Opening file name Computed_Distance_to_station_and_total_trips.FIL as supplied in the table layout.
+@ OPEN NUM_Of_END_STATION_USE
+14:25:58 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_END_STATION_USE.FIL as supplied in the table layout.
+@ OPEN NUM_Of_START_STATION_USE
+14:26:20 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_START_STATION_USE.FIL as supplied in the table layout.
+@ OPEN NUM_Of_END_STATION_USE
+14:26:22 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_END_STATION_USE.FIL as supplied in the table layout.
+@ OPEN NUM_Of_START_STATION_USE
+14:27:21 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_START_STATION_USE.FIL as supplied in the table layout.
+@ SORT ON COUNT D TO NUM_Of_START_STATION_USE_SORT
+14:27:30 - 04/19/2019  
+831 records produced
+Output to K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\NUM_Of_START_STATION_USE_SORT.FIL is done
+@ OPEN NUM_Of_START_STATION_USE_SORT
+14:27:36 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_START_STATION_USE_SORT.FIL as supplied in the table layout.
+@ OPEN NUM_Of_END_STATION_USE
+14:27:44 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_END_STATION_USE.FIL as supplied in the table layout.
+@ SORT ON COUNT D TO NUM_Of_END_STATION_USE_SORT
+14:27:50 - 04/19/2019  
+864 records produced
+Output to K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\NUM_Of_END_STATION_USE_SORT.FIL is done
+@ CLOSE
+14:27:53 - 04/19/2019  
+@ OPEN NUM_Of_START_STATION_USE_SORT
+14:28:25 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_START_STATION_USE_SORT.FIL as supplied in the table layout.
+@ EXTRACT RECORD IF RECNO( ) <= 20 TO "T20" OPEN
+14:28:56 - 04/19/2019  
+  20 of 831 met the test: RECNO( ) <= 20 
+20 records produced
+Extraction to table K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\T20.FIL is complete
+Opening file "T20"
+@ OPEN "T20"
+14:28:56 - 04/19/2019  
+5 fields activated
+Opening file name T20.FIL as supplied in the table layout.
+@ CLOSE
+14:29:13 - 04/19/2019  
+@ OPEN NUM_Of_START_STATION_USE_SORT
+14:29:37 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_START_STATION_USE_SORT.FIL as supplied in the table layout.
+@ EXTRACT RECORD IF RECNO( ) <= 20 TO "NUM_Of_START_STATION_USE_SORT_T20" OPEN
+14:29:42 - 04/19/2019  
+  20 of 831 met the test: RECNO( ) <= 20 
+20 records produced
+Extraction to table K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\NUM_Of_START_STATION_USE_SORT_T20.FIL is complete
+Opening file "NUM_Of_START_STATION_USE_SORT_T20"
+@ OPEN "NUM_Of_START_STATION_USE_SORT_T20"
+14:29:42 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_START_STATION_USE_SORT_T20.FIL as supplied in the table layout.
+@ OPEN NUM_Of_END_STATION_USE_SORT
+14:29:47 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_END_STATION_USE_SORT.FIL as supplied in the table layout.
+@ EXTRACT RECORD IF RECNO( ) <= 20 TO "NUM_Of_END_STATION_USE_SORT_T20" OPEN
+14:29:53 - 04/19/2019  
+  20 of 864 met the test: RECNO( ) <= 20 
+20 records produced
+Extraction to table K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\NUM_Of_END_STATION_USE_SORT_T20.FIL is complete
+Opening file "NUM_Of_END_STATION_USE_SORT_T20"
+@ OPEN "NUM_Of_END_STATION_USE_SORT_T20"
+14:29:53 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_END_STATION_USE_SORT_T20.FIL as supplied in the table layout.
+@ CLOSE
+14:29:58 - 04/19/2019  
+@ OPEN CitiBike_Distance_Version_SORT
+14:30:39 - 04/19/2019  
+29 fields activated
+Opening file name CitiBike_Distance_Version_SORT.FIL as supplied in the table layout.
+@ open Computed_Distance_to_station_and_total_trips
+14:30:53 - 04/19/2019  
+4 fields activated
+Opening file name Computed_Distance_to_station_and_total_trips.FIL as supplied in the table layout.
+@ DELETE FIELD COUNT OK 
+14:32:25 - 04/19/2019  
+@ DEFINE FIELD TRIP_COUNT     ACL        21  12 0 WIDTH 8  
+
+14:32:25 - 04/19/2019  
+@ OPEN Computed_Distance_to_station_and_total_trips
+14:32:27 - 04/19/2019  
+4 fields activated
+Opening file name Computed_Distance_to_station_and_total_trips.FIL as supplied in the table layout.
+@ OPEN NUM_Of_END_STATION_USE_SORT_T20
+14:33:05 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_END_STATION_USE_SORT_T20.FIL as supplied in the table layout.
+@ OPEN NUM_Of_START_STATION_USE_SORT_T20
+14:33:08 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_START_STATION_USE_SORT_T20.FIL as supplied in the table layout.
+@ DELETE FIELD COUNT OK 
+14:34:13 - 04/19/2019  
+@ DEFINE FIELD START_STATION_COUNT ACL         5  12 0 WIDTH 8  
+
+14:34:13 - 04/19/2019  
+@ OPEN NUM_Of_START_STATION_USE_SORT_T20
+14:34:14 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_START_STATION_USE_SORT_T20.FIL as supplied in the table layout.
+@ OPEN NUM_Of_END_STATION_USE_SORT_T20
+14:34:59 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_END_STATION_USE_SORT_T20.FIL as supplied in the table layout.
+@ DELETE FIELD COUNT OK 
+14:35:15 - 04/19/2019  
+@ DEFINE FIELD END_STATION_COUNT ACL         5  12 0 WIDTH 8  
+
+14:35:15 - 04/19/2019  
+@ OPEN NUM_Of_END_STATION_USE_SORT_T20
+14:35:16 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_END_STATION_USE_SORT_T20.FIL as supplied in the table layout.
+@ OPEN CitiBike_Distance_Version
+14:36:32 - 04/19/2019  
+29 fields activated
+Opening file name CitiBike_Distance_Version.fil as supplied in the table layout.
+@ OPEN Computed_Distance_to_station_and_total_trips SECONDARY
+14:36:37 - 04/19/2019  
+Closing file: Computed_Distance_to_station_and_total_trips.FIL
+4 fields activated
+Opening file name Computed_Distance_to_station_and_total_trips.FIL as supplied in the table layout.
+@ JOIN PKEY Start_Station_Id End_Station_Id FIELDS Bikeid Birth_Year END_STATION_TOTAL Distance_S_to_E Circular End_Station_Id End_Station_Latitude End_Station_Longitude End_Station_Name Gender Geometry Lat_Test Large Mini_Hoop Name Number_of_Records Small Start_Station_Id__bin_ Start_Station_Id Start_Station_Latitude Start_Station_Longitude Start_Station_Name Starttime Station_Latitude Station_Longitude Stoptime Total_Rack Tripduration Usertype SKEY Start_Station_Id End_Station_Id WITH Distance_S_to_E TRIP_COUNT PRIMARY TO "TEMP_J_1" OPEN PRESORT SECSORT
+14:38:01 - 04/19/2019  
+Field 'Distance_S_to_E' renamed 'Distance_S_to_E2' to remove name conflict
+Presorting data
+Presorting data
+19459370 records produced
+  0 PRIMARY records unmatched and written with nulls
+Extraction to table K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\TEMP_J_1.FIL is complete
+Opening file "TEMP_J_1"
+@ OPEN "TEMP_J_1"
+14:48:20 - 04/19/2019  
+31 fields activated
+Opening file name TEMP_J_1.FIL as supplied in the table layout.
+Closing file: Computed_Distance_to_station_and_total_trips.FIL
+@ OPEN NUM_Of_START_STATION_USE_SORT_T20 SECONDARY
+14:49:30 - 04/19/2019  
+Closing file: NUM_Of_START_STATION_USE_SORT_T20.FIL
+5 fields activated
+Opening file name NUM_Of_START_STATION_USE_SORT_T20.FIL as supplied in the table layout.
+@ JOIN PKEY Start_Station_Id FIELDS Bikeid Birth_Year END_STATION_TOTAL Distance_S_to_E Circular End_Station_Id End_Station_Latitude End_Station_Longitude End_Station_Name Gender Geometry Lat_Test Large Mini_Hoop Name Number_of_Records Small Start_Station_Id__bin_ Start_Station_Id Start_Station_Latitude Start_Station_Longitude Start_Station_Name Starttime Station_Latitude Station_Longitude Stoptime Total_Rack Tripduration Usertype Distance_S_to_E2 TRIP_COUNT SKEY Start_Station_Id WITH START_STATION_COUNT PRIMARY TO "TEMP_J_2" OPEN PRESORT SECSORT
+14:50:32 - 04/19/2019  
+Presorting data
+Presorting data
+19459370 records produced
+  17488516 PRIMARY records unmatched and written with nulls
+Extraction to table K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\TEMP_J_2.FIL is complete
+Opening file "TEMP_J_2"
+@ OPEN "TEMP_J_2"
+15:01:05 - 04/19/2019  
+32 fields activated
+Opening file name TEMP_J_2.FIL as supplied in the table layout.
+Closing file: NUM_Of_START_STATION_USE_SORT_T20.FIL
+@ CLOSE
+15:01:17 - 04/19/2019  
+@ CLOSE SECONDARY
+15:02:36 - 04/19/2019  
+@ OPEN TEMP_J_2
+15:02:41 - 04/19/2019  
+32 fields activated
+Opening file name TEMP_J_2.FIL as supplied in the table layout.
+@ OPEN NUM_Of_END_STATION_USE_SORT_T20 SECONDARY
+15:02:49 - 04/19/2019  
+Closing file: NUM_Of_END_STATION_USE_SORT_T20.FIL
+5 fields activated
+Opening file name NUM_Of_END_STATION_USE_SORT_T20.FIL as supplied in the table layout.
+@ JOIN PKEY End_Station_Id FIELDS Bikeid Birth_Year END_STATION_TOTAL Distance_S_to_E Circular End_Station_Id End_Station_Latitude End_Station_Longitude End_Station_Name Gender Geometry Lat_Test Large Mini_Hoop Name Number_of_Records Small Start_Station_Id__bin_ Start_Station_Id Start_Station_Latitude Start_Station_Longitude Start_Station_Name Starttime Station_Latitude Station_Longitude Stoptime Total_Rack Tripduration Usertype Distance_S_to_E2 TRIP_COUNT START_STATION_COUNT SKEY End_Station_Id WITH END_STATION_COUNT PRIMARY TO "FINAL_CityBike_Distance_With_Extras" OPEN PRESORT SECSORT
+15:03:44 - 04/19/2019  
+Presorting data
+Presorting data
+19459370 records produced
+  17454146 PRIMARY records unmatched and written with nulls
+Extraction to table K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\FINAL_CityBike_Distance_With_Extras.FIL is complete
+Opening file "FINAL_CityBike_Distance_With_Extras"
+@ OPEN "FINAL_CityBike_Distance_With_Extras"
+15:15:36 - 04/19/2019  
+33 fields activated
+Opening file name FINAL_CityBike_Distance_With_Extras.FIL as supplied in the table layout.
+Closing file: NUM_Of_END_STATION_USE_SORT_T20.FIL
+@ RENAME SCRIPT S_SUM_TO_TRIPS2 S_SUM_TO_TRIPS_Tripduration OK
+15:22:23 - 04/19/2019  
+@ OPEN CitiBike_Distance_Version
+15:22:55 - 04/19/2019  
+29 fields activated
+Opening file name CitiBike_Distance_Version.fil as supplied in the table layout.
+@ DELETE FIELD Tripduration OK 
+15:23:15 - 04/19/2019  
+@ DEFINE FIELD Tripduration   NUMERIC   279   8 0 WIDTH 8  
+
+15:23:15 - 04/19/2019  
+@ OPEN CitiBike_Distance_Version
+15:23:17 - 04/19/2019  
+29 fields activated
+Opening file name CitiBike_Distance_Version.fil as supplied in the table layout.
+@ OPEN CitiBike_Distance_Version_SORT
+15:27:26 - 04/19/2019  
+29 fields activated
+Opening file name CitiBike_Distance_Version_SORT.FIL as supplied in the table layout.
+@ SUMMARIZE ON Start_Station_Id End_Station_Id SUBTOTAL Distance_S_to_E Tripduration TO "Computed_Distance_to_station_and_total_trips.FIL"
+15:27:40 - 04/19/2019  
+Command Failed
+@ DELETE FIELD Tripduration OK 
+15:28:03 - 04/19/2019  
+@ DEFINE FIELD Tripduration   NUMERIC   279   8 0 WIDTH 8  
+
+15:28:03 - 04/19/2019  
+@ OPEN CitiBike_Distance_Version_SORT
+15:28:05 - 04/19/2019  
+29 fields activated
+Opening file name CitiBike_Distance_Version_SORT.FIL as supplied in the table layout.
+@ SUMMARIZE ON Start_Station_Id End_Station_Id SUBTOTAL Distance_S_to_E Tripduration TO "Computed_Distance_to_station_and_total_trips.FIL" OPEN
+15:28:17 - 04/19/2019  
+358213 records produced
+Output to K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\Computed_Distance_to_station_and_total_trips.FIL is done
+Opening file "Computed_Distance_to_station_and_total_trips"
+@ OPEN "Computed_Distance_to_station_and_total_trips"
+15:28:37 - 04/19/2019  
+5 fields activated
+Opening file name Computed_Distance_to_station_and_total_trips.FIL as supplied in the table layout.
+@ DELETE FIELD Tripduration OK 
+15:29:18 - 04/19/2019  
+@ DEFINE FIELD TOTAL_Tripduration ACL        21  12 0  
+
+15:29:19 - 04/19/2019  
+@ DELETE FIELD COUNT OK 
+15:29:32 - 04/19/2019  
+@ DEFINE FIELD TRIP_COUNT     ACL        33  12 0 WIDTH 8  
+
+15:29:32 - 04/19/2019  
+@ OPEN Computed_Distance_to_station_and_total_trips
+15:29:34 - 04/19/2019  
+5 fields activated
+Opening file name Computed_Distance_to_station_and_total_trips.FIL as supplied in the table layout.
+@ CLOSE
+15:31:03 - 04/19/2019  
+@ OPEN FINAL_CityBike_Distance_With_Extras
+15:31:04 - 04/19/2019  
+@ CLOSE
+15:31:04 - 04/19/2019  
+@ DO S_SUM_TO_TRIPS_Tripduration
+15:31:52 - 04/19/2019  
+@ COMMENT
+15:31:52 - 04/19/2019  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Imports RAW data and creates outputs
+SCRIPT NAME: S_SUM_TO_TRIPS
+SCRIPT DISCRIPTION: This is the script template
+WRITTEN BY: Dan Boulden 04/2019
+VERSION: 1.0
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+END
+
+@ SET SAFETY OFF
+15:31:52 - 04/19/2019  
+@ SET FOLDER /RAW
+15:31:52 - 04/19/2019  
+
+@ COMMENT ******** START SCRIPT HERE ********
+15:31:52 - 04/19/2019  
+@ OPEN TEST
+15:31:52 - 04/19/2019  
+28 fields activated
+Opening file name TEST.fil as supplied in the table layout.
+@ IMPORT DELIMITED TO CitiBike_Distance_Version "CitiBike_Distance_Version.fil" FROM "K:\Dan_Boulden\Homework_Tableau\Instructions\DATA\From_Tableau\citibike_201801_TO_201902_tripdata_Distance_Version.csv" 0 SEPARATOR "," QUALIFIER NONE CONSECUTIVE STARTLINE 1 KEEPTITLE FIELD "Bikeid" C AT 1 DEC 0 WID 5 PIC "" AS "" FIELD "Birth_Year" C AT 6 DEC 0 WID 4 PIC "" AS "" FIELD "END_STATION_TOTAL" C AT 10 DEC 9 WID 12 PIC "" AS "" FIELD "Distance_S_to_E" N AT 22 DEC 9 WID 15 PIC "" AS "" FIELD "Circular" C AT 37 DEC 0 WID 1 PIC "" AS "" FIELD "End_Station_Id" C AT 38 DEC 0 WID 4 PIC "" AS "" FIELD "End_Station_Latitude" C AT 42 DEC 9 WID 12 PIC "" AS "" FIELD "End_Station_Longitude" C AT 54 DEC 9 WID 13 PIC "" AS "" FIELD "End_Station_Name" C AT 67 DEC 0 WID 45 PIC "" AS "" FIELD "Gender" C AT 112 DEC 0 WID 1 PIC "" AS "" FIELD "Geometry" C AT 113 DEC 0 WID 1 PIC "" AS "" FIELD "Lat_Test" C AT 114 DEC 9 WID 12 PIC "" AS "" FIELD "Large" C AT 126 DEC 0 WID 1 PIC "" AS "" FIELD "Mini_Hoop" C AT 127 DEC 0 WID 1 PIC "" AS "" FIELD "Name" C AT 128 DEC 0 WID 1 PIC "" AS "" FIELD "Number_of_Records" C AT 129 DEC 0 WID 1 PIC "" AS "" FIELD "Small" C AT 130 DEC 0 WID 1 PIC "" AS "" FIELD "Start_Station_Id__bin_" C AT 131 DEC 0 WID 4 PIC "" AS "" FIELD "Start_Station_Id" C AT 135 DEC 0 WID 4 PIC "" AS "" FIELD "Start_Station_Latitude" C AT 139 DEC 9 WID 12 PIC "" AS "" FIELD "Start_Station_Longitude" C AT 151 DEC 9 WID 13 PIC "" AS "" FIELD "Start_Station_Name" C AT 164 DEC 0 WID 45 PIC "" AS "" FIELD "Starttime" D AT 209 DEC 0 WID 22 PIC "MM/DD/YYYY hh:mm:ss AM" AS "" FIELD "Station_Latitude" C AT 231 DEC 9 WID 12 PIC "" AS "" FIELD "Station_Longitude" C AT 243 DEC 9 WID 13 PIC "" AS "" FIELD "Stoptime" D AT 256 DEC 0 WID 22 PIC "MM/DD/YYYY hh:MM:ss AM" AS "" FIELD "Total_Rack" C AT 278 DEC 0 WID 1 PIC "" AS "" FIELD "Tripduration" C AT 279 DEC 0 WID 8 PIC "" AS "" FIELD "Usertype" C AT 287 DEC 0 WID 10 PIC "" AS ""
+15:31:52 - 04/19/2019  
+@ OPEN CitiBike_Distance_Version
+15:39:35 - 04/19/2019  
+29 fields activated
+Opening file name CitiBike_Distance_Version.fil as supplied in the table layout.
+
+
+@ OPEN CitiBike_Distance_Version
+15:39:35 - 04/19/2019  
+29 fields activated
+Opening file name CitiBike_Distance_Version.fil as supplied in the table layout.
+@ DELETE FIELD Tripduration OK
+15:39:35 - 04/19/2019  
+@ DEFINE FIELD Tripduration   NUMERIC   279   8 0 WIDTH 8
+15:39:35 - 04/19/2019  
+@ CLOSE CitiBike_Distance_Version
+15:39:35 - 04/19/2019  
+@ OPEN CitiBike_Distance_Version
+15:39:35 - 04/19/2019  
+29 fields activated
+Opening file name CitiBike_Distance_Version.fil as supplied in the table layout.
+
+@ SET FOLDER /TEMP
+15:39:35 - 04/19/2019  
+
+@ COMMENT Presorted to speed up the SUMMARIZE.
+15:39:35 - 04/19/2019  
+@ OPEN CitiBike_Distance_Version
+15:39:35 - 04/19/2019  
+29 fields activated
+Opening file name CitiBike_Distance_Version.fil as supplied in the table layout.
+@ SORT ON Start_Station_Id End_Station_Id TO CitiBike_Distance_Version_SORT
+15:39:35 - 04/19/2019  
+19459370 records produced
+Output to K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\CitiBike_Distance_Version_SORT.FIL is done
+
+
+@ SET FOLDER /WORKING
+15:42:19 - 04/19/2019  
+@ OPEN CitiBike_Distance_Version_SORT
+15:42:19 - 04/19/2019  
+29 fields activated
+Opening file name CitiBike_Distance_Version_SORT.FIL as supplied in the table layout.
+@ SUMMARIZE ON Start_Station_Id End_Station_Id SUBTOTAL Distance_S_to_E Tripduration TO "Computed_Distance_to_station_and_total_trips.FIL"
+15:42:19 - 04/19/2019  
+358213 records produced
+Output to K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\Computed_Distance_to_station_and_total_trips.FIL is done
+
+@ OPEN Computed_Distance_to_station_and_total_trips
+15:42:39 - 04/19/2019  
+5 fields activated
+Opening file name Computed_Distance_to_station_and_total_trips.FIL as supplied in the table layout.
+
+
+@ DELETE FIELD Tripduration OK
+15:42:39 - 04/19/2019  
+@ DEFINE FIELD TOTAL_Tripduration ACL        21  12 0
+15:42:39 - 04/19/2019  
+
+@ DELETE FIELD COUNT OK
+15:42:39 - 04/19/2019  
+@ DEFINE FIELD TRIP_COUNT     ACL        33  12 0 WIDTH 8
+15:42:39 - 04/19/2019  
+
+
+@ CLOSE Computed_Distance_to_station_and_total_trips
+15:42:39 - 04/19/2019  
+@ OPEN Computed_Distance_to_station_and_total_trips
+15:42:39 - 04/19/2019  
+5 fields activated
+Opening file name Computed_Distance_to_station_and_total_trips.FIL as supplied in the table layout.
+
+@ OPEN CitiBike_Distance_Version
+15:42:39 - 04/19/2019  
+29 fields activated
+Opening file name CitiBike_Distance_Version.fil as supplied in the table layout.
+@ SUMMARIZE ON Start_Station_Id OTHER Start_Station_Id Start_Station_Latitude Start_Station_Longitude Start_Station_Name TO "NUM_Of_START_STATION_USE.FIL" PRESORT
+15:42:39 - 04/19/2019  
+Presorting data
+831 records produced
+Output to K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\NUM_Of_START_STATION_USE.FIL is done
+
+@ SUMMARIZE ON End_Station_Id OTHER End_Station_Id End_Station_Latitude End_Station_Longitude End_Station_Name TO "NUM_Of_END_STATION_USE.FIL" PRESORT
+15:43:37 - 04/19/2019  
+Presorting data
+864 records produced
+Output to K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\NUM_Of_END_STATION_USE.FIL is done
+
+@ OPEN NUM_Of_START_STATION_USE
+15:44:25 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_START_STATION_USE.FIL as supplied in the table layout.
+@ SORT ON COUNT D TO NUM_Of_START_STATION_USE_SORT
+15:44:25 - 04/19/2019  
+831 records produced
+Output to K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\NUM_Of_START_STATION_USE_SORT.FIL is done
+@ OPEN NUM_Of_START_STATION_USE_SORT
+15:44:25 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_START_STATION_USE_SORT.FIL as supplied in the table layout.
+@ EXTRACT RECORD IF RECNO( ) <= 20 TO "NUM_Of_START_STATION_USE_SORT_T20" OPEN
+15:44:25 - 04/19/2019  
+  20 of 831 met the test: RECNO( ) <= 20 
+20 records produced
+Extraction to table K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\NUM_Of_START_STATION_USE_SORT_T20.FIL is complete
+Opening file "NUM_Of_START_STATION_USE_SORT_T20"
+@ OPEN "NUM_Of_START_STATION_USE_SORT_T20"
+15:44:25 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_START_STATION_USE_SORT_T20.FIL as supplied in the table layout.
+
+@ OPEN NUM_Of_START_STATION_USE_SORT_T20
+15:44:25 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_START_STATION_USE_SORT_T20.FIL as supplied in the table layout.
+@ DELETE FIELD COUNT OK
+15:44:25 - 04/19/2019  
+@ DEFINE FIELD START_STATION_COUNT ACL         5  12 0 WIDTH 8
+15:44:25 - 04/19/2019  
+
+@ CLOSE NUM_Of_START_STATION_USE_SORT_T20
+15:44:25 - 04/19/2019  
+@ OPEN NUM_Of_START_STATION_USE_SORT_T20
+15:44:25 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_START_STATION_USE_SORT_T20.FIL as supplied in the table layout.
+
+
+
+@ OPEN NUM_Of_END_STATION_USE
+15:44:25 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_END_STATION_USE.FIL as supplied in the table layout.
+@ SORT ON COUNT D TO NUM_Of_END_STATION_USE_SORT
+15:44:25 - 04/19/2019  
+864 records produced
+Output to K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\NUM_Of_END_STATION_USE_SORT.FIL is done
+@ OPEN NUM_Of_END_STATION_USE_SORT
+15:44:25 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_END_STATION_USE_SORT.FIL as supplied in the table layout.
+@ EXTRACT RECORD IF RECNO( ) <= 20 TO "NUM_Of_END_STATION_USE_SORT_T20" OPEN
+15:44:25 - 04/19/2019  
+  20 of 864 met the test: RECNO( ) <= 20 
+20 records produced
+Extraction to table K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\NUM_Of_END_STATION_USE_SORT_T20.FIL is complete
+Opening file "NUM_Of_END_STATION_USE_SORT_T20"
+@ OPEN "NUM_Of_END_STATION_USE_SORT_T20"
+15:44:25 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_END_STATION_USE_SORT_T20.FIL as supplied in the table layout.
+
+@ OPEN NUM_Of_END_STATION_USE_SORT_T20
+15:44:25 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_END_STATION_USE_SORT_T20.FIL as supplied in the table layout.
+@ DELETE FIELD COUNT OK
+15:44:25 - 04/19/2019  
+@ DEFINE FIELD END_STATION_COUNT ACL         5  12 0 WIDTH 8
+15:44:25 - 04/19/2019  
+
+@ CLOSE NUM_Of_END_STATION_USE_SORT_T20
+15:44:25 - 04/19/2019  
+@ OPEN NUM_Of_END_STATION_USE_SORT_T20
+15:44:25 - 04/19/2019  
+5 fields activated
+Opening file name NUM_Of_END_STATION_USE_SORT_T20.FIL as supplied in the table layout.
+
+
+@ OPEN CitiBike_Distance_Version
+15:44:25 - 04/19/2019  
+29 fields activated
+Opening file name CitiBike_Distance_Version.fil as supplied in the table layout.
+@ OPEN Computed_Distance_to_station_and_total_trips SECONDARY
+15:44:26 - 04/19/2019  
+Closing file: Computed_Distance_to_station_and_total_trips.FIL
+5 fields activated
+Opening file name Computed_Distance_to_station_and_total_trips.FIL as supplied in the table layout.
+@ JOIN PKEY Start_Station_Id End_Station_Id FIELDS ALL SKEY Start_Station_Id End_Station_Id WITH Distance_S_to_E TRIP_COUNT TOTAL_Tripduration PRIMARY TO "TEMP_J_1" OPEN PRESORT SECSORT
+15:44:26 - 04/19/2019  
+Field 'Distance_S_to_E' renamed 'Distance_S_to_E2' to remove name conflict
+Presorting data
+Presorting data
+19459370 records produced
+  0 PRIMARY records unmatched and written with nulls
+Extraction to table K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\TEMP_J_1.FIL is complete
+Opening file "TEMP_J_1"
+@ OPEN "TEMP_J_1"
+15:54:36 - 04/19/2019  
+32 fields activated
+Opening file name TEMP_J_1.FIL as supplied in the table layout.
+
+@ CLOSE SECONDARY
+15:54:36 - 04/19/2019  
+Closing file: Computed_Distance_to_station_and_total_trips.FIL
+
+@ OPEN TEMP_J_1
+15:54:36 - 04/19/2019  
+32 fields activated
+Opening file name TEMP_J_1.FIL as supplied in the table layout.
+@ OPEN NUM_Of_START_STATION_USE_SORT_T20 SECONDARY
+15:54:36 - 04/19/2019  
+Closing file: NUM_Of_START_STATION_USE_SORT_T20.FIL
+5 fields activated
+Opening file name NUM_Of_START_STATION_USE_SORT_T20.FIL as supplied in the table layout.
+
+@ JOIN PKEY Start_Station_Id FIELDS ALL SKEY Start_Station_Id WITH START_STATION_COUNT PRIMARY TO "TEMP_J_2" OPEN PRESORT SECSORT
+15:54:36 - 04/19/2019  
+Presorting data
+Presorting data
+19459370 records produced
+  17488516 PRIMARY records unmatched and written with nulls
+Extraction to table K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\TEMP_J_2.FIL is complete
+Opening file "TEMP_J_2"
+@ OPEN "TEMP_J_2"
+16:05:26 - 04/19/2019  
+33 fields activated
+Opening file name TEMP_J_2.FIL as supplied in the table layout.
+@ OPEN TEMP_J_2
+16:05:26 - 04/19/2019  
+33 fields activated
+Opening file name TEMP_J_2.FIL as supplied in the table layout.
+
+@ SET FOLDER /FINAL
+16:05:26 - 04/19/2019  
+
+@ CLOSE SECONDARY
+16:05:26 - 04/19/2019  
+Closing file: NUM_Of_START_STATION_USE_SORT_T20.FIL
+@ OPEN NUM_Of_END_STATION_USE_SORT_T20 SECONDARY
+16:05:26 - 04/19/2019  
+Closing file: NUM_Of_END_STATION_USE_SORT_T20.FIL
+5 fields activated
+Opening file name NUM_Of_END_STATION_USE_SORT_T20.FIL as supplied in the table layout.
+@ JOIN PKEY End_Station_Id FIELDS ALL SKEY End_Station_Id WITH END_STATION_COUNT PRIMARY TO "FINAL_CityBike_Distance_With_Extras" OPEN PRESORT SECSORT
+16:05:26 - 04/19/2019  
+Presorting data
+Presorting data
+19459370 records produced
+  17454146 PRIMARY records unmatched and written with nulls
+Extraction to table K:\Dan_Boulden\Homework_Tableau\Instructions\The_Work\ACL\FINAL_CityBike_Distance_With_Extras.FIL is complete
+Opening file "FINAL_CityBike_Distance_With_Extras"
+@ OPEN "FINAL_CityBike_Distance_With_Extras"
+16:16:55 - 04/19/2019  
+34 fields activated
+Opening file name FINAL_CityBike_Distance_With_Extras.FIL as supplied in the table layout.
+
+
+@ CLOSE SECONDARY
+16:16:55 - 04/19/2019  
+Closing file: NUM_Of_END_STATION_USE_SORT_T20.FIL
+
+@ OPEN FINAL_CityBike_Distance_With_Extras
+16:16:55 - 04/19/2019  
+34 fields activated
+Opening file name FINAL_CityBike_Distance_With_Extras.FIL as supplied in the table layout.
+
+
+@ COMMENT ******** END SCRIPT HERE ********
+16:16:55 - 04/19/2019  
+
+@ COMMENT Change to remove temp tables
+16:16:55 - 04/19/2019  
+@ COMMENT
+16:16:55 - 04/19/2019  
+DELETE FORMAT CitiBike_Distance_Version_SORT OK
+DELETE CitiBike_Distance_Version_SORT.fil OK
+
+
+@ SET FOLDER /
+16:16:55 - 04/19/2019  
+@ SET SAFETY ON
+16:16:55 - 04/19/2019  
+
+
+@ COMMENT - Execution of S_SUM_TO_TRIPS_Tripduration completed
+16:16:55 - 04/19/2019  
+@ EXPORT FIELDS Bikeid Birth_Year END_STATION_TOTAL Distance_S_to_E End_Station_Id End_Station_Latitude End_Station_Longitude End_Station_Name Gender Lat_Test Number_of_Records Start_Station_Id Start_Station_Latitude Start_Station_Longitude Start_Station_Name Starttime Station_Latitude Station_Longitude Stoptime Tripduration Usertype Distance_S_to_E2 TRIP_COUNT TOTAL_Tripduration START_STATION_COUNT END_STATION_COUNT DELIMITED TO "K:\Dan_Boulden\Homework_Tableau\Instructions\DATA\From_ACL\FINAL_City_Bike_Distance_With_Extras" KEEPTITLE SEPARATOR "|" QUALIFIER '"'
+16:56:41 - 04/19/2019  
+19459370 records produced
+Output to K:\Dan_Boulden\Homework_Tableau\Instructions\DATA\From_ACL\FINAL_City_Bike_Distance_With_Extras.del is done
+@ CLOSE
+17:22:24 - 04/19/2019  
